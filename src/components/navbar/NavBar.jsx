@@ -14,7 +14,7 @@ const navItems = [
   },
   {
     id: 2,
-    name: "works",
+    name: "projects",
   },
   {
     id: 3,
@@ -59,10 +59,10 @@ const NavBar = ({ toggleDarkMode, darkMode }) => {
         <div data-aos="fade-down" className="logo">
           <Link
             onClick={() => window.scrollTo(0, 0)}
-            to="/"
+            to="#home"
             className="text-3xl font-bold sm:text-3xl"
           >
-            John Doe.
+            Reece Nunez
           </Link>
         </div>
         <div
@@ -106,7 +106,7 @@ const NavBar = ({ toggleDarkMode, darkMode }) => {
               </li>
             ))}
             <a
-              href=""
+              href="#contact"
               className="bg-black text-[1rem] text-white px-8 py-2 rounded-lg font-bold hover:text-yellow-400 md:m-5 md:block md:mx-auto md:w-fit lg:px-3"
             >
               HIRE ME
