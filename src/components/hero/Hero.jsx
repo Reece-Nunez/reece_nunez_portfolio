@@ -9,6 +9,7 @@ import { FiDownload } from "react-icons/fi";
 import { FaPlay } from "react-icons/fa";
 import { TypeAnimation } from "react-type-animation";
 import resumePDF from "../../assets/2023 Resume.pdf";
+import headshotImage from "../../assets/head_shot.png";
 
 
 const Hero = () => {
@@ -99,7 +100,7 @@ const Hero = () => {
             <img
             data-aos="fade-up"
               className=" h-[90%]  w-full object-cover md:h-[95%] md:m-auto sm:m-0 rounded-full"
-              src='/src/assets/head_shot.png'
+              src={headshotImage}
               // src={mine}
               alt="mine"
             />

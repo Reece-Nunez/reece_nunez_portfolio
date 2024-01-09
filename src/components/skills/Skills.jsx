@@ -3,6 +3,18 @@ import ProgressBar from "../../chip/ProgressBar";
 import SkillBox from "../../chip/SkillBox";
 
 import { IoLogoHtml5, IoLogoCss3 } from "react-icons/io";
+import agileImage from '../../assets/agile.png';
+import androidImage from '../../assets/android.png';
+import typescriptImage from '../../assets/typescript.png';
+import springbootImage from '../../assets/springboot.png';
+import scrumImage from '../../assets/scrum.png';
+import pythonImage from '../../assets/python.png';
+import postgreImage from '../../assets/postgresql.png';
+import mysqlImage from '../../assets/mysql.png';
+import javascriptImage from '../../assets/javascript.png';
+import javaImage from '../../assets/java.png';
+import hmtlImage from '../../assets/html.png';
+import cssImage from '../../assets/css.png';
 
 
 import {
@@ -12,8 +24,6 @@ import {
   SiExpress,
   SiAngularjs,
 } from "react-icons/si";
-import { GrCode } from "react-icons/gr";
-import { SiNextdotjs } from "react-icons/si";
 import { FaJava, FaReact } from "react-icons/fa";
 import { IoLogoNodejs } from "react-icons/io";
 
@@ -118,42 +128,42 @@ const Skills = ({ darkMode }) => {
           <img
             title="Python"
             className="w-[40px] h-[40px] md:w-[35px] md:h-[35px]"
-            src="/src/assets/python.png"
+            src={pythonImage}
           />
           <img
             title="Agile Development"
             className="w-[40px] h-[40px] md:w-[35px] md:h-[35px]"
-            src="/src/assets/agile.png"
+            src={agileImage}
           />
           <img
             title="TypeScript"
             className="w-[40px] h-[40px] md:w-[35px] md:h-[35px]"
-            src="/src/assets/typescript.png"
+            src={typescriptImage}
           />
           <img
             title="Android Development"
             className="w-[40px] h-[40px] md:w-[35px] md:h-[35px]"
-            src="/src/assets/android.png"
+            src={androidImage}
           />
           <img
             title="SpringBoot"
             className="w-[40px] h-[40px] md:w-[35px] md:h-[35px]"
-            src="/src/assets/springboot.png"
+            src={springbootImage}
           />
           <img
             title="SCRUM"
             className="w-[40px] h-[40px] md:w-[35px] md:h-[35px]"
-            src="/src/assets/scrum.png"
+            src={scrumImage}
           />
           <img
             title="PostgreSQL"
             className="w-[40px] h-[40px] md:w-[35px] md:h-[35px]"
-            src="/src/assets/postgresql.png"
+            src={postgreImage}
           />
           <img
             title="MySQL"
             className="w-[40px] h-[40px] md:w-[35px] md:h-[35px]"
-            src="/src/assets/mysql.png"
+            src={mysqlImage}
           />
           <img className="w-[40px] h-[40px] md:w-[35px] md:h-[35px]" src="https://img.icons8.com/color/48/null/javascript--v1.png"/>
           <img className="w-[40px] h-[40px] md:w-[35px] md:h-[35px]" src="https://img.icons8.com/color/48/null/nodejs.png"/>
