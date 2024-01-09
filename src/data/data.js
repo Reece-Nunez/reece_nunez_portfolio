@@ -3,26 +3,34 @@
 export const data = [
   {
     id: 1,
-    img: 'https://i.postimg.cc/VkRWdHWx/57214s81.jpg',
-    title: "Multimedia Web",
+    img: '/src/assets/Android Application.jpg',
+    title: "Android Vacation Tracker",
     desc: "",
     link: "",
-    git: "",
+    git: "https://github.com/Reece-Nunez/Android_Vacation_Tracker",
   },
   {
     id: 2,
-    img: 'https://i.postimg.cc/Bv75CLyN/4167022.jpg',
-    title: "Tarvel Agency",
+    img: '/src/assets/angular-map-project.jpg',
+    title: "Angular Interactive Map",
     link: "",
-    git: "",
+    git: "https://github.com/Reece-Nunez/Angular_Interactive_Map",
   },
   {
     id: 3,
-    img: 'https://i.postimg.cc/wBjcJcW7/5890625.jpg',
-    title: "Music Player",
+    img: '/src/assets/Interactive design.jpg',
+    title: "Interactive UX Website",
     desc: "",
     link: "",
-    git: "",
+    git: "https://github.com/Reece-Nunez/Interactive_UX_Website",
+  },
+  {
+    id: 4,
+    img: '/src/assets/spring-web-application.jpg',
+    title: "Spring Boot Store Web Application",
+    desc: "",
+    link: "",
+    git: "https://github.com/Reece-Nunez/Spring_Boot_Web_Application",
   }
   
 ];

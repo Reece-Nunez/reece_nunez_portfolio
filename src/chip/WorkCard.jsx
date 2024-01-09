@@ -18,7 +18,7 @@ const WorkCard = () => {
             className="flex flex-col justify-center items-center gap-4"
           >
             <POPUP className="img-content relative">
-              <div className="h-[280px] w-[380px] hover:scale-125 transition duration-500 cursor-pointer shadow-xl rounded-md overflow-hidden sm:h-[260px] sm:w-[92%] sm:bg-cover mx-auto ">
+              <div className="h-[280px] hover:scale-125 transition duration-500 cursor-pointer shadow-xl rounded-md overflow-hidden sm:h-[260px] sm:w-[92%] sm:bg-cover mx-auto ">
                 <img
                   src={data.img}
                   alt={data.title}
@@ -33,14 +33,6 @@ const WorkCard = () => {
                   {data.desc}
                 </p>
                 <div className=" flex items-center justify-center gap-4">
-                  <Link
-                    to={data.link}
-                    target="_blank"
-                    className="  mt-3 rounded-md shadow-md p-1 px-2 flex gap-2 items-center justify-center font-medium"
-                  >
-                    <RxExternalLink className=" text-black bg-white rounded-full border  w-[35px] h-[35px] p-2" />
-                    <p className=" text-black">Demo</p>
-                  </Link>
                   <br className="w-[2px] bg-white" />
                   <Link
                     to={data.git}
