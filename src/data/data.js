@@ -1,9 +1,14 @@
+import androidAppImage from '/src/assets/Android Application.jpg';
+import angularMapImage from '/src/assets/angular-map-project.jpg';
+import interactiveDesignImage from '/src/assets/Interactive design.jpg';
+import springWebAppImage from '/src/assets/spring-web-application.jpg';
+
 
 
 export const data = [
   {
     id: 1,
-    img: '/src/assets/Android Application.jpg',
+    img: androidAppImage,
     title: "Android Vacation Tracker",
     desc: "",
     link: "",
@@ -11,14 +16,14 @@ export const data = [
   },
   {
     id: 2,
-    img: '/src/assets/angular-map-project.jpg',
+    img: angularMapImage,
     title: "Angular Interactive Map",
     link: "",
     git: "https://github.com/Reece-Nunez/Angular_Interactive_Map",
   },
   {
     id: 3,
-    img: '/src/assets/Interactive design.jpg',
+    img: interactiveDesignImage,
     title: "Interactive UX Website",
     desc: "",
     link: "",
@@ -26,7 +31,7 @@ export const data = [
   },
   {
     id: 4,
-    img: '/src/assets/spring-web-application.jpg',
+    img: springWebAppImage,
     title: "Spring Boot Store Web Application",
     desc: "",
     link: "",
