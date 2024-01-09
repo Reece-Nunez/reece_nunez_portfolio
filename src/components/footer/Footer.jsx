@@ -13,8 +13,8 @@ const Footer = () => {
         <div className=" flex items-center justify-center gap-8 sm:gap-5">
           <a 
           data-aos="fade-up" data-aos-duration="1000"
-
-            href=""
+            target="_blank"
+            href="https://t.me/reecenunez"
             className="box font-medium text-white   flex items-center justify-center flex-col"
           >
             <FaTelegramPlane className=" text-black text-3xl hover:scale-125 cursor-pointer" />
@@ -22,8 +22,8 @@ const Footer = () => {
           </a>
           <a 
           data-aos="fade-up" data-aos-duration="1200"
-
-            href=""
+            target="_blank"
+            href="https://wa.me/+14356606100"
             className="box font-medium text-white  flex items-center justify-center flex-col"
           >
             <IoLogoWhatsapp className=" text-black text-3xl hover:scale-125 cursor-pointer" />
@@ -31,8 +31,8 @@ const Footer = () => {
           </a>
           <a 
           data-aos="fade-up" data-aos-duration="1400"
-
-            href=""
+            target="_blank"
+            href="https://www.instagram.com/reecenunez20"
             className="box font-medium text-white  flex items-center justify-center flex-col"
           >
             <RiInstagramFill className=" text-black text-3xl hover:scale-125 cursor-pointer" />
@@ -40,7 +40,7 @@ const Footer = () => {
           </a>
         </div>
         <div className="sm:text-[12px]">
-          | Copyright &copy; <span>2023 Dev AlphaSpace </span> All rights reserved
+          | Copyright &copy; <span>2024 Reece Nunez </span> All rights reserved
           <a href="#"></a> |
         </div>
       </div>
