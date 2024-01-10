@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Contact from "../components/contact/Contact";
 import Footer from "../components/footer/Footer";
 import Hero from "../components/hero/Hero";
@@ -9,10 +9,22 @@ import Work from "../components/work/Work";
 import Certs from "../components/certs/Certs";
 
 const Home = () => {
+
   const [darkMode, setDarkMode] = useState(false);
+
   function toggleDarkMode() {
-    setDarkMode((prevDarkMode) => !prevDarkMode);
+    setDarkMode(!darkMode);
   }
+
+  useEffect(() => {
+    console.log("Dark mode state changed to:", darkMode);
+    if (darkMode) {
+      document.body.classList.add("dark");
+    } else {
+      document.body.classList.remove("dark");
+    }
+  }, [darkMode]);
+
   return (
     <>
       <NavBar darkMode={darkMode} toggleDarkMode={toggleDarkMode} />

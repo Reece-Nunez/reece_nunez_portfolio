@@ -10,18 +10,20 @@ import { FaPlay } from "react-icons/fa";
 import { TypeAnimation } from "react-type-animation";
 import resumePDF from "../../assets/2023 Resume.pdf";
 import headshotImage from "../../assets/head_shot.png";
-import circleImage from "../../assets/circle.png"
+import darkModeImage from "../../assets/circle.png"
+import lightModeImage from "../../assets/Full Stack Developer2.png";
 
 
-const Hero = () => {
+const Hero = ({ darkMode, toggleDarkMode }) => {
+  console.log("Hero rendered", {darkMode, toggleDarkMode});
   return (
-    <div id="home" className={` bg-gradient-to-r from-green-200 to-blue-200 `}>
+    <div id="home" className={` bg-gradient-to-r from-green-200 to-blue-200 dark:from-gray-800 dark:to-gray-900`}>
       <div className=" container mx-auto pt-5 h-[750px] md:h-[100vh] md:flex-col-reverse sm:h-[780px]  flex sm:flex-col-reverse sm:pt-0 ">
         <div className=" left mt-4 md:mt-0 flex-1 flex flex-col justify-center gap-5 w-1/2 md:w-full md:py-2 sm:py-0">
           <div className="info w-fit flex flex-col items-start justify-center gap-3 sm:gap-2">
             <h2
               data-aos="fade-up"
-              className=" text-5xl font-bold sm:text-[2rem]"
+              className=" text-5xl font-bold sm:text-[2rem] dark:text-white"
             >
               Hello, I'm Reece  Nunez
             </h2>
@@ -37,11 +39,11 @@ const Hero = () => {
               speed={30}
               wrapper="h2"
               repeat={Infinity}
-              className="text-yellow-500 text-4xl font-bold sm:text-3xl"
+              className="text-yellow-500 text-4xl font-bold sm:text-3xl dark:text-yellow-300"
             />
             <p
               // data-aos="fade-up"
-              className=" text-[1.1rem] font-medium w-3/4 md:w-full text-gray-600 sm:text-[.95rem]"
+              className=" text-[1.1rem] font-medium w-3/4 md:w-full text-gray-600 sm:text-[.95rem] dark:text-white"
             >
               Let's Collaborate and Create Something Amazing
             </p>
@@ -49,7 +51,7 @@ const Hero = () => {
           <div data-aos="fade-up" className="buttons flex gap-5">
             <a
               href="#contact"
-              className=" bg-black text-[1rem] text-white px-10 py-2 sm:px-8 rounded-lg font-bold  hover:text-yellow-500"
+              className=" bg-black text-[1rem] text-white px-10 py-2 sm:px-8 rounded-lg font-bold  hover:text-yellow-500 dark:bg-white dark:text-black"
             >
               <span> Hire Me</span>
             </a>
@@ -72,25 +74,25 @@ const Hero = () => {
               <li>
                 <a href="https://www.github.com/reece-nunez" target="_blank">
                   {" "}
-                  <AiFillGithub className=" h-[1.8rem] w-[1.8rem] text-xl hover:scale-125" />{" "}
+                  <AiFillGithub className=" h-[1.8rem] w-[1.8rem] text-xl hover:scale-125 dark:text-white"/>{" "}
                 </a>
               </li>
               <li>
                 <a href="https://www.linkedin.com/in/reecenunez" target="_blank">
                   {" "}
-                  <FaLinkedinIn className=" h-[1.8rem] w-[1.8rem] text-xl hover:scale-125 " />{" "}
+                  <FaLinkedinIn className=" h-[1.8rem] w-[1.8rem] text-xl hover:scale-125 dark:text-white" />{" "}
                 </a>
               </li>
               <li>
                 <a href="https://www.instagram.com/reecenunez20" target="_blank">
                   {" "}
-                  <AiFillInstagram className=" h-[1.8rem] w-[1.8rem] text-xl hover:scale-125  " />{" "}
+                  <AiFillInstagram className=" h-[1.8rem] w-[1.8rem] text-xl hover:scale-125  dark:text-white" />{" "}
                 </a>
               </li>
               <li>
                 <a href="https://www.facebook.com/reecenunez20" target="_blank">
                   {" "}
-                  <FaFacebook className=" h-[1.8rem] w-[1.8rem] text-xl hover:scale-125  " />{" "}
+                  <FaFacebook className=" h-[1.8rem] w-[1.8rem] text-xl hover:scale-125 dark:text-white " />{" "}
                 </a>
               </li>
             </ul>
@@ -108,12 +110,14 @@ const Hero = () => {
             <div className=" absolute bottom-10 md:bottom-3 right-8 md:right-2">
               <div data-aos="zoom-in" data-aos-duration="1000"  className=" relative cursor-pointer">
                 <img
-                  className=" w-[135px] md:w-[90px] circle-text"
-                  src={circleImage}
+                  className=" w-[135px] md:w-[90px] circle-text "
+                  src={darkMode ? lightModeImage : darkModeImage}
                   alt=""
+                  title="Toggle dark mode"
+                  onClick={toggleDarkMode}
                 />
                 <FaPlay
-                  className=" text-white absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]"
+                  className=" text-white absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] dark:text-black"
                 />
               </div>
             </div>
