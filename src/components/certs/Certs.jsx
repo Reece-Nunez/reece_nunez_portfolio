@@ -23,16 +23,16 @@ const Certs = ({ darkMode }) => {
                     </div>
                 </div>
                 {/* content */}
-                <div data-aos="zoom-in" className="flex flex-wrap justify-center gap-10">
-                    <div className="w-full sm:w-1/2 md:w-1/3">
+                <div data-aos="zoom-in" className="flex flex-row items-center sm:items-center sm:flex-col justify-center gap-10">
+                    <div className="w-full md:w-1/3">
                         <CertBox image={itilImage} certName="ITIL 4 Foundation" />
                     </div>
-                    <div className="w-full sm:w-1/2 md:w-1/3">
+                    <div className="w-full md:w-1/3">
                         <CertBox image={awsImage} certName="AWS Cloud Practitioner" />
                     </div>
-                    <div className="w-full sm:w-1/2 md:w-1/3">
+                    <div className="w-full md:w-1/3">
                         <CertBox image={comptiaImage} certName="CompTIA Project+" />
-                    </div>               
+                    </div>
                 </div>
             </div>
         </div>
