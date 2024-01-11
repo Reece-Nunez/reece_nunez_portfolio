@@ -132,51 +132,51 @@ const Skills = ({ darkMode }) => {
         >
           <img
             title="Git"
-            className="w-[40px] h-[40px] md:w-[35px] md:h-[35px]"
+            className={`w-[40px] h-[40px] md:w-[35px] md:h-[35px] ${darkMode ? 'dark-mode-icon' : ''}`}
             src="https://img.icons8.com/ios-filled/50/null/git.png"
             />
           <img
             title="Python"
-            className="w-[40px] h-[40px] md:w-[35px] md:h-[35px]"
+            className={`w-[40px] h-[40px] md:w-[35px] md:h-[35px] ${darkMode ? 'dark-mode-icon' : ''}`}
             src={pythonImage}
           />
           <img
             title="Agile Development"
-            className="w-[40px] h-[40px] md:w-[35px] md:h-[35px]"
+            className={`w-[40px] h-[40px] md:w-[35px] md:h-[35px] ${darkMode ? 'dark-mode-icon' : ''}`}
             src={agileImage}
           />
           <img
             title="TypeScript"
-            className="w-[40px] h-[40px] md:w-[35px] md:h-[35px]"
+            className={`w-[40px] h-[40px] md:w-[35px] md:h-[35px] ${darkMode ? 'dark-mode-icon' : ''}`}
             src={typescriptImage}
           />
           <img
             title="Android Development"
-            className="w-[40px] h-[40px] md:w-[35px] md:h-[35px]"
+            className={`w-[40px] h-[40px] md:w-[35px] md:h-[35px] ${darkMode ? 'dark-mode-icon' : ''}`}
             src={androidImage}
           />
           <img
             title="SpringBoot"
-            className="w-[40px] h-[40px] md:w-[35px] md:h-[35px]"
+            className={`w-[40px] h-[40px] md:w-[35px] md:h-[35px] ${darkMode ? 'dark-mode-icon' : ''}`}
             src={springbootImage}
           />
           <img
             title="SCRUM"
-            className="w-[40px] h-[40px] md:w-[35px] md:h-[35px]"
+            className={`w-[40px] h-[40px] md:w-[35px] md:h-[35px] ${darkMode ? 'dark-mode-icon' : ''}`}
             src={scrumImage}
           />
           <img
             title="PostgreSQL"
-            className="w-[40px] h-[40px] md:w-[35px] md:h-[35px]"
+            className={`w-[40px] h-[40px] md:w-[35px] md:h-[35px] ${darkMode ? 'dark-mode-icon' : ''}`}
             src={postgreImage}
           />
           <img
             title="MySQL"
-            className="w-[40px] h-[40px] md:w-[35px] md:h-[35px]"
+            className={`w-[40px] h-[40px] md:w-[35px] md:h-[35px] ${darkMode ? 'dark-mode-icon' : ''}`}
             src={mysqlImage}
           />
-          <img className="w-[40px] h-[40px] md:w-[35px] md:h-[35px]" src="https://img.icons8.com/color/48/null/javascript--v1.png"/>
-          <img className="w-[40px] h-[40px] md:w-[35px] md:h-[35px]" src="https://img.icons8.com/color/48/null/nodejs.png"/>
+          <img className={`w-[40px] h-[40px] md:w-[35px] md:h-[35px] ${darkMode ? 'dark-mode-icon' : ''}`} src="https://img.icons8.com/color/48/null/javascript--v1.png"/>
+          <img className={`w-[40px] h-[40px] md:w-[35px] md:h-[35px] ${darkMode ? 'dark-mode-icon' : ''}`} src="https://img.icons8.com/color/48/null/nodejs.png"/>
         </div> }
       </div>
     </div>

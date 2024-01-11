@@ -69,3 +69,7 @@ html {
   background-color: #4A5568;
   color: white;
 }
+
+.dark-mode-icon {
+  filter: grayscale(100%) brightness(.9) invert(100%)
+}
