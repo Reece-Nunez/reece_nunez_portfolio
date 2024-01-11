@@ -34,9 +34,9 @@ const Contact = () => {
       {showModal && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
           {/* Modal Content */}
-          <div className="bg-white p-8 rounded-lg shadow-lg max-w-md w-full">
-            <p className="text-lg font-semibold mb-4">Thanks for your message!</p>
-            <button onClick={closeModal} className="bg-yellow-500 text-white font-bold py-2 px-4 rounded hover:bg-yellow-600">Close</button>
+          <div className="bg-white p-8 rounded-lg shadow-lg max-w-md w-full dark:bg-gray-700">
+            <p className="text-lg font-semibold mb-4 dark:text-white">Thanks for your message!</p>
+            <button onClick={closeModal} className="bg-yellow-500 text-white font-bold py-2 px-4 rounded hover:bg-yellow-600 dark:bg-black">Close</button>
           </div>
         </div>
       )}
@@ -45,7 +45,7 @@ const Contact = () => {
       <div
       // data-aos="fade-up"
       className="relative mb-5">
-        <h3 className=" text-3xl font-black text-gray-400 sm:text-2xl">
+        <h3 className=" text-3xl font-black text-gray-400 sm:text-2xl dark:text-white">
           Contact
         </h3>
         <span className="h-[1.1px] right-0 absolute w-[92%] bg-gray-300 block"></span>
@@ -58,20 +58,17 @@ const Contact = () => {
             <div
             data-aos="zoom-in"
             >
-              <h1 className="text-4xl font-bold sm:text-3xl">Do You Want To</h1>
-              <h3 className="text-xl sm:text-lg">
+              <h1 className="text-4xl font-bold sm:text-3xl dark:text-white">Do You Want To</h1>
+              <h3 className="text-xl sm:text-lg dark:text-white">
                 Collaborate on a New Software Solution? Leave a Request
               </h3>
             </div>
           </div>
           <div className=" flex p-5 items-center justify-center ">
             <button
-              
               data-aos="zoom-in"
-              
-              className= " text-yellow-500 font-extrabold text-3xl p-2 rounded-lg shadow-[0_0_10px_1px_rgba(0,0,0,0.1)] "
-            >
-              <BsArrowRight className=" md:rotate-90" />
+              className= " text-yellow-500 font-extrabold text-3xl p-2 rounded-lg shadow-[0_0_10px_1px_rgba(0,0,0,0.1)] dark:shadow-[0_0_10px_1px_rgba(0,0,0,0.1)]">
+              <BsArrowRight className=" md:rotate-90 dark:text-white" />
             </button>
           </div>
         </div>
@@ -85,21 +82,21 @@ const Contact = () => {
           >
             {/* form fields */}
             <input
-              className="px-3 shadow-[0_0_16px_0px_rgba(0,0,0,0.1)] p-2 rounded-lg w-full"
+              className="px-3 shadow-[0_0_16px_0px_rgba(0,0,0,0.1)] p-2 rounded-lg w-full dark:bg-gray-700 dark:text-white"
               type="email"
               placeholder="e.g. example@email.com"
               name="email"
               required
             />
             <input
-              className="px-3 shadow-[0_0_16px_0px_rgba(0,0,0,0.1)] p-2 rounded-lg w-full"
+              className="px-3 shadow-[0_0_16px_0px_rgba(0,0,0,0.1)] p-2 rounded-lg w-full dark:bg-gray-700 dark:text-white"
               type="text"
               placeholder="e.g. John Doe"
               name="name"
               required
             />
             <textarea
-              className="px-3 shadow-[0_0_16px_0px_rgba(0,0,0,0.1)] p-2 rounded-lg w-full"
+              className="px-3 shadow-[0_0_16px_0px_rgba(0,0,0,0.1)] p-2 rounded-lg w-full dark:bg-gray-700 dark:text-white"
               rows="4"
               cols="50"
               placeholder="Write your message"
@@ -108,7 +105,7 @@ const Contact = () => {
               required
             />
             <button
-              className="bg-yellow-500 w-full text-white font-semibold  p-2 rounded-lg flex items-center justify-center space-x-1"
+              className="bg-yellow-500 w-full text-white font-semibold  p-2 rounded-lg flex items-center justify-center space-x-1 dark:bg-gray-700"
               type="submit"
               disabled={state.submitting}
             >
