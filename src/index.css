@@ -146,7 +146,7 @@ input:checked + .slider:before {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  gap: 8px;
+  gap: 48px;
 }
 
 /* Grid layout for small screens */
