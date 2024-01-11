@@ -39,7 +39,7 @@ const Hero = ({ darkMode, toggleDarkMode }) => {
               speed={30}
               wrapper="h2"
               repeat={Infinity}
-              className="text-yellow-500 text-4xl font-bold sm:text-3xl dark:white-300"
+              className="text-yellow-500 text-4xl font-bold sm:text-3xl"
             />
             <p
               // data-aos="fade-up"

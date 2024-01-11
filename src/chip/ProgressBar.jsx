@@ -1,11 +1,11 @@
 import React from "react";
 import styled from "styled-components";
 
-const ProgressBar = ({ logo, name, value, duration = 3 }) => {
+const ProgressBar = ({ logo, name, value, duration = 3, darkMode }) => {
   return (
     <div className="flex flex-col gap-2 sm:gap-1 text-xl font-semibold ">
       <div className="flex justify-between">
-        <p className="text-[1.15rem] flex items-center gap-3 sm:text-[1rem] exsm:text-sm exsm:gap-3">
+        <p className="text-[1.15rem] flex items-center gap-3 sm:text-[1rem] exsm:text-sm exsm:gap-3 dark:text-white">
           {logo} {name}
         </p>{" "}
         {/* <span className=" text-gray-400 text-[1.1rem] sm:text-[1rem] exsm:text-sm">
@@ -14,6 +14,7 @@ const ProgressBar = ({ logo, name, value, duration = 3 }) => {
       </div>
       <div className="h-[8px] w-[100%] relative rounded-3xl bg-gray-300">
         <Progress
+          darkMode={darkMode}
           className="w-[0%] h-[8px] absolute rounded-3xl bg-yellow-500"
           style={{
             width: `${value}%`,
@@ -36,4 +37,5 @@ const Progress = styled.div`
       width: ${(props) => props.width};
     }
   }
+  background-color: ${(props) => (props.darkMode ? '#4A5568' : '#facc15')};
 `;
