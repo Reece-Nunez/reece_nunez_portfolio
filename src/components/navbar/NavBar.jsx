@@ -104,7 +104,7 @@ const NavBar = ({ toggleDarkMode, darkMode, heroRef }) => {
           {/* hamburger */}
           <button
             onClick={toggleNav}
-            className="cursor-pointer text-2xl hidden md:block"
+            className={`cursor-pointer text-2xl hidden md:block ${ darkMode ? 'text-white' : ''}`}
           >
             <HiMenu size={25} />
           </button>
@@ -112,12 +112,12 @@ const NavBar = ({ toggleDarkMode, darkMode, heroRef }) => {
           <ul
             className={`flex items-center space-x-11 ${
               !isOpen ? "md:flex" : "md:right-[0%]"
-            } md:flex-col md:absolute m-auto md:top-0 md:right-[-100%] md:w-[78%] md:h-screen md:bg-white `}
+            } md:flex-col md:absolute m-auto md:top-0 md:right-[-100%] md:w-[78%] md:h-screen md:bg-white dark:bg-gray-900`}
           >
             {/* Use a button tag for better accessibility */}
             <button
               onClick={toggleNav}
-              className={`text-3xl hidden md:block relative right-0 top-4 container mx-auto`}
+              className={`text-3xl hidden md:block relative right-0 top-4 container mx-auto ${ darkMode ? 'text-white' : '' }`}
             >
               <RxCross2 size={25} />
             </button>
