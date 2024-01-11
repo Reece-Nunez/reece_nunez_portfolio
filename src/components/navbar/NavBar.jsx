@@ -53,7 +53,7 @@ const NavBar = ({ toggleDarkMode, darkMode }) => {
     <div
       className={`w-full mx-auto  fixed top-0 py-5 sm:py-4 z-30 ${
         scrollPosition > 0
-        ? (darkMode ? 'bg-black' : 'bg-white shadow-md')
+        ? (darkMode ? 'bg-gray-900' : 'bg-white shadow-md')
         : 'bg-transparent'
       } `}
     >
