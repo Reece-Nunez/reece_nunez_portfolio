@@ -1,7 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { Link } from "react-router-dom";
 import { HiMenu } from "react-icons/hi";
 import { RxCross2 } from "react-icons/rx";
+import{ FaMoon, FaSun } from 'react-icons/fa';
 
 const navItems = [
   {
@@ -26,9 +27,26 @@ const navItems = [
   },
 ];
 
-const NavBar = ({ toggleDarkMode, darkMode }) => {
+// Dark Mode Toggle
+
+const DarkModeToggle = ({ isDarkMode, onToggle }) => {
+  return (
+    <div className="flex items-center">
+      <FaMoon className="text-lg dark:text-white" /> {/* Moon icon */}
+      <label className="switch mx-2">
+        <input type="checkbox" checked={isDarkMode} onChange={onToggle} />
+        <span className="slider round"></span>
+      </label>
+      <FaSun className="text-lg dark:text-white" /> {/* Sun icon */}
+    </div>
+  );
+}
+
+const NavBar = ({ toggleDarkMode, darkMode, heroRef }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeIndex, setActiveIndex] = useState(null);
+  const [scrollPosition, setScrollPosition] = useState(0);
+  const [showToggle, setShowToggle] = useState(false);
 
   // Toggle the navbar
   const toggleNav = (name) => {
@@ -36,10 +54,13 @@ const NavBar = ({ toggleDarkMode, darkMode }) => {
     setActiveIndex(name === activeIndex ? null : name);
   };
 
-  const [scrollPosition, setScrollPosition] = useState(0);
   useEffect(() => {
     const handleScroll = () => {
-      setScrollPosition(window.scrollY);
+      const heroHeight = heroRef.current?.offsetHeight || 0;
+      const currentScrollPos = window.scrollY;
+      const offset = 900;
+      setScrollPosition(currentScrollPos);
+      setShowToggle(currentScrollPos > heroHeight + offset);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -47,7 +68,7 @@ const NavBar = ({ toggleDarkMode, darkMode }) => {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, []);
+  }, [heroRef]);
 
   return (
     <div
@@ -58,6 +79,15 @@ const NavBar = ({ toggleDarkMode, darkMode }) => {
       } `}
     >
       <nav className=" container m-auto flex items-center justify-between">
+
+        {/*Dark Mode Toggle */}
+        {showToggle && (
+          <DarkModeToggle
+            isDarkMode={darkMode}
+            onToggle={toggleDarkMode}
+          />
+        )}
+
         <div data-aos="fade-down" className="logo">
           <Link
             onClick={() => window.scrollTo(0, 0)}

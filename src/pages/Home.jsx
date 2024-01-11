@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Contact from "../components/contact/Contact";
 import Footer from "../components/footer/Footer";
 import Hero from "../components/hero/Hero";
@@ -11,6 +11,7 @@ import Certs from "../components/certs/Certs";
 const Home = () => {
 
   const [darkMode, setDarkMode] = useState(false);
+  const heroRef = useRef(null);
 
   function toggleDarkMode() {
     setDarkMode(!darkMode);
@@ -27,8 +28,8 @@ const Home = () => {
 
   return (
     <>
-      <NavBar darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
-      <Hero darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
+      <NavBar darkMode={darkMode} toggleDarkMode={toggleDarkMode} heroRef={heroRef} />
+      <Hero ref={heroRef} darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
       <Skills darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
       <Certs darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
       <Work darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
