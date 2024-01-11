@@ -62,5 +62,10 @@ html {
 
 /* Dark mode specific styles */
 .dark {
-  background-color: #1a202c
+  background-color: #1a202c;
+}
+
+.dark .box{
+  background-color: #4A5568;
+  color: white;
 }

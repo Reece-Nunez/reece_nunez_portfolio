@@ -91,31 +91,24 @@ const Skills = ({ darkMode }) => {
             <div className="first2 flex flex-col gap-10">
               <SkillBox
                 logo={<IoLogoNodejs />}
-                black={"white"}
-                white={"black"}
+                darkMode={darkMode}
                 skill={"Node Js"}
               />
               <SkillBox
                 logo={<SiMongodb />}
-                black={"white"}
-                white={"black"}
+                darkMode={darkMode}
                 skill={"MongoDB"}
               />
             </div>
             <div className="last2 flex flex-col gap-10">
               <SkillBox
                 logo={<SiAngularjs />}
-                black={"black"}
-                white={"white"}
+                darkMode={darkMode}
                 skill={"Angular Js"}
               />
               <SkillBox
-                className=""
-                logo={
-                  <FaJava/>
-                }
-                black={"black"}
-                white={"white"}
+                logo={<FaJava/>}
+                darkMode={darkMode}
                 skill={"Java"}
               />
               {/* <SkillBox
