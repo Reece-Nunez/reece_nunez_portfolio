@@ -54,14 +54,14 @@ const Skills = ({ darkMode }) => {
             >
               <div className=" flex flex-col gap-6  w-3/4  my-5 md:w-[90%]">
                 <ProgressBar
-                 logo={<IoLogoHtml5 />} 
-                 name={"HTML"} 
-                 value={95}
-                 darkMode={darkMode} 
-                 />
-                <ProgressBar 
-                logo={<IoLogoCss3 />} 
-                name={"CSS"} 
+                logo={<IoLogoHtml5 />}
+                name={"HTML"}
+                value={95}
+                darkMode={darkMode}
+                />
+                <ProgressBar
+                logo={<IoLogoCss3 />}
+                name={"CSS"}
                 value={88}
                 darkMode={darkMode}
                 />
@@ -71,9 +71,9 @@ const Skills = ({ darkMode }) => {
                   value={60}
                   darkMode={darkMode}
                 />
-                <ProgressBar 
-                logo={<FaReact />} 
-                name={"React Js"} 
+                <ProgressBar
+                logo={<FaReact />}
+                name={"React Js"}
                 value={30}
                 darkMode={darkMode}
                 />
@@ -128,7 +128,7 @@ const Skills = ({ darkMode }) => {
         { <div
           data-aos="fade-up"
           data-aos-duration="1200"
-          className=" container m-auto flex items-center justify-center mt-8 gap-8 md:gap-5"
+          className="icon-container container m-auto flex items-center justify-center mt-8 gap-8 md:gap-5"
         >
           <img
             title="Git"
