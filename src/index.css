@@ -48,6 +48,11 @@ html {
 .circle-text{
   -webkit-animation: spin 12s linear infinite;
   animation: spin 12s linear infinite;
+  transition: transform 0.3s ease;
+}
+
+.circle-text:hover {
+  scale: 1.1;
 }
 
 @-webkit-keyframes spin {
