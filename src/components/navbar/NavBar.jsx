@@ -88,13 +88,21 @@ const NavBar = ({ toggleDarkMode, darkMode, heroRef }) => {
           />
         )}
 
-        <div data-aos="fade-down" className="logo">
+        <div data-aos="fade-down" className="logo flex">
           <Link
             onClick={() => window.scrollTo(0, 0)}
             to="#home"
-            className="text-3xl font-bold sm:text-3xl dark:text-white"
+            className="title-name flex items-center text-3xl font-bold sm:text-3xl dark:text-white"
           >
-            Reece Nunez
+            <img
+            src="/src/assets/reece-nunez-high-resolution-logo-transparent.svg"
+            onClick={() => window.scrollTo(0, 0)}
+            to="/home"
+            className="reece-logo w-12 h-12 mr-5"
+            alt="reece-logo"/>
+            <span>
+              Reece Nunez
+            </span>
           </Link>
         </div>
         <div

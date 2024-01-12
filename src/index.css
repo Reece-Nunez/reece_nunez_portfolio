@@ -169,6 +169,10 @@ input:checked + .slider:before {
     bottom: 2px;
   }
 
+  .reece-logo {
+    visibility: hidden;
+  }
+
   input:checked + .slider:before {
     -webkit-transform: translateX(18px);
     -ms-transform: translateX(18px);
