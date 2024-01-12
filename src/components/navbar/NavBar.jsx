@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { HiMenu } from "react-icons/hi";
 import { RxCross2 } from "react-icons/rx";
 import{ FaMoon, FaSun } from 'react-icons/fa';
+import reeceLogo from "../../assets/reece-nunez-high-resolution-logo-transparent.svg";
 
 const navItems = [
   {
@@ -95,7 +96,7 @@ const NavBar = ({ toggleDarkMode, darkMode, heroRef }) => {
             className="title-name flex items-center text-3xl font-bold sm:text-3xl dark:text-white"
           >
             <img
-            src="/src/assets/reece-nunez-high-resolution-logo-transparent.svg"
+            src={reeceLogo}
             onClick={() => window.scrollTo(0, 0)}
             to="/home"
             className="reece-logo w-12 h-12 mr-5"
