@@ -121,7 +121,7 @@ const NavBar = ({ toggleDarkMode, darkMode, heroRef }) => {
           <ul
             className={`flex items-center space-x-11 ${
               !isOpen ? "md:flex" : "md:right-[0%]"
-            } md:flex-col md:absolute m-auto md:top-0 md:right-[-100%] md:w-[78%] md:h-screen md:bg-white dark:bg-gray-900`}
+            } md:flex-col md:absolute m-auto md:top-0 md:right-[-100%] md:w-[78%] md:h-screen md:bg-white ${ darkMode ? 'md:bg-gray-900' : 'bg-transparent' }`}
           >
             {/* Use a button tag for better accessibility */}
             <button
