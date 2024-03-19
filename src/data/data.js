@@ -40,7 +40,7 @@ export const data = [
   }
   {
     id: 5,
-    img: springWebAppImage,
+    img: stockSyncImage,
     title: "StockSync FullStack Inventory Manager",
     desc: "",
     link: "",
