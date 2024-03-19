@@ -2,6 +2,7 @@ import androidAppImage from '/src/assets/Android Application.jpg';
 import angularMapImage from '/src/assets/angular-map-project.jpg';
 import interactiveDesignImage from '/src/assets/Interactive design.jpg';
 import springWebAppImage from '/src/assets/spring-web-application.jpg';
+import stockSyncImage from '/src/assets/image.png';
 
 
 
