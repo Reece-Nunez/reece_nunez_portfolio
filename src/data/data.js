@@ -37,5 +37,13 @@ export const data = [
     link: "",
     git: "https://github.com/Reece-Nunez/Spring_Boot_Web_Application",
   }
+  {
+    id: 5,
+    img: springWebAppImage,
+    title: "StockSync FullStack Inventory Manager",
+    desc: "",
+    link: "",
+    git: "https://github.com/Reece-Nunez/StockSync",
+  }
   
 ];
