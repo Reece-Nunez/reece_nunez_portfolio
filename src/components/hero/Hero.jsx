@@ -34,6 +34,8 @@ const Hero = ({ darkMode, toggleDarkMode }) => {
                 2000,
                 "Full Stack Engineer",
                 2000,
+                "Application Developer",
+                2000,
                 "",
               ]}
               speed={30}
