@@ -37,7 +37,7 @@ export const data = [
     desc: "",
     link: "",
     git: "https://github.com/Reece-Nunez/Spring_Boot_Web_Application",
-  }
+  },
   {
     id: 5,
     img: stockSyncImage,
