@@ -44,17 +44,17 @@ const Resume = () => {
                   May 2016 - Present
                 </span>
                 <p className=" text-[.9rem] text-justify break-words text-gray-500 dark:text-white">
-                As a Refinery Process Operator, my role centers on overseeing and managing
-                sophisticated refining operations within a high-stakes facility, valued at
-                a billion dollars per day. My approach is firmly rooted in data analytics,
-                allowing me to refine processes for optimized yield and enhanced efficiency.
-                Safety and environmental compliance are paramount in my work, ensuring adherence
-                to stringent standards. Serving as the key liaison, I collaborate closely with
-                external operators to identify and troubleshoot issues promptly. My
-                responsibilities also include orchestrating complex, time-sensitive operations,
-                all aimed at maintaining a seamless and highly efficient workflow. This pivotal
-                role demands a keen eye for detail and a proactive stance in the face of operational
-                challenges, ensuring every process contributes to the overarching goal of streamlined productivity.
+                As a Refinery Process Operator, I oversee complex refining operations, leveraging 
+                  data analytics to enhance yield and efficiency in a facility generating over a 
+                  billion dollars daily. My focus on safety and environmental standards is 
+                  unwavering. I operate a distributed control system, managing over 50,000 
+                  barrels/day, which boosts our efficiency significantly. With Bentley Systems, 
+                  I’ve improved workflows by 15%, and by implementing SAP for work order management, 
+                  I’ve cut maintenance turnaround times by 20%. The PI System helps me analyze data
+                  in real time, reducing energy consumption by 10%. I also automate processes 
+                  using logic controllers, enhancing system reliability. My role is critical in 
+                  maintaining seamless, efficient operations and solving issues swiftly, always 
+                  aiming for optimal productivity.
                 </p>
               </div>
             </div>
