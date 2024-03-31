@@ -44,7 +44,7 @@ const Resume = () => {
                   May 2016 - Present
                 </span>
                 <p className=" text-[.9rem] text-justify break-words text-gray-500 dark:text-white">
-                As a Refinery Process Operator, I oversee complex refining operations, leveraging 
+                  As a Refinery Process Operator, I oversee complex refining operations, leveraging 
                   data analytics to enhance yield and efficiency in a facility generating over a 
                   billion dollars daily. My focus on safety and environmental standards is 
                   unwavering. I operate a distributed control system, managing over 50,000 
@@ -87,21 +87,26 @@ const Resume = () => {
                   2022 - 2024
                 </span>
                 <p className=" text-[.9rem] text-justify text-gray-500 dark:text-white">
-                During my Software Engineering studies, I've completed
-                several notable projects, including the development of
-                a detailed, four-page website that serves as a guide to
-                a U.S. state, created using HTML5 and CSS to ensure
-                accessibility and user engagement. I've also designed a
-                Spring Framework application to streamline inventory
-                management for a retail client, a project that required
-                a custom HTML interface and robust backend coding,
-                solidified by extensive unit testing. Another project
-                involved creating an interactive world map with AngularJS
-                and API integration, enhancing user interaction with
-                real-time data. Additionally, I developed an Android
-                vacation tracking application, incorporating comprehensive
-                data management and user notification features, demonstrating
-                my ability to deliver cross-platform, user-centric software solutions.
+                  Throughout my Software Engineering studies, I've completed a diverse 
+                  array of projects, demonstrating a strong aptitude for developing 
+                  user-focused and operationally efficient software solutions. Notably, 
+                  I designed and implemented a Full Stack Inventory Management System 
+                  that leverages Angular for the front end and Spring Boot for the backend. 
+                  This comprehensive system includes features such as dynamic searching, 
+                  inventory KPI visualization, and JWT-based security, aimed at streamlining 
+                  operations and enhancing the user experience. Additionally, I developed a 
+                  four-page website as a detailed guide to a U.S. state, utilizing HTML5 and 
+                  CSS to ensure accessibility and engagement, incorporating visual data 
+                  presentations and interactive forms for a rich user experience. My 
+                  portfolio also includes a Spring Boot application for retail inventory 
+                  management, which introduced a custom HTML interface for dynamic updates 
+                  and rigorous unit testing to ensure reliability. Another significant project 
+                  was an interactive world map using AngularJS and API integration, designed to 
+                  provide real-time, engaging data interaction on a global scale. Furthermore, 
+                  I created an Android Vacation Tracker App, emphasizing easy management of travel 
+                  details and a user-friendly interface, showcasing my skills in cross-platform 
+                  development and UI/UX design. Each of these projects reflects my commitment 
+                  to delivering sophisticated, secure, and user-centric software solutions.
                 </p>
               </div>
             </div>
