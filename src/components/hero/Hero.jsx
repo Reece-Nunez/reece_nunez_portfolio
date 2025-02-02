@@ -1,4 +1,4 @@
-import React from "react";
+import React, { forwardRef } from "react";
 import {
   AiFillTwitterCircle,
   AiFillGithub,
@@ -8,13 +8,13 @@ import { FaFacebook, FaLinkedinIn } from "react-icons/fa";
 import { FiDownload } from "react-icons/fi";
 import { FaPlay } from "react-icons/fa";
 import { TypeAnimation } from "react-type-animation";
-import resumePDF from "../../assets/reece_resume_2024.pdf";
+import resumePDF from "../../assets/reece_resume_2025.pdf";
 import headshotImage from "../../assets/head_shot.png";
 import darkModeImage from "../../assets/circle.png"
 import lightModeImage from "../../assets/Full Stack Developer2.png";
 
 
-const Hero = ({ darkMode, toggleDarkMode }) => {
+const Hero = forwardRef(({ darkMode, toggleDarkMode }, ref) => {
   console.log("Hero rendered", {darkMode, toggleDarkMode});
   return (
     <div id="home" className={` bg-gradient-to-r from-custom-light-blue to-custom-blue dark:from-gray-600 dark:to-gray-950`}>
@@ -128,6 +128,6 @@ const Hero = ({ darkMode, toggleDarkMode }) => {
       </div>
     </div>
   );
-};
+});
 
 export default Hero;

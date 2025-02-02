@@ -1,32 +1,51 @@
-import React, {useState, useEffect, useRef} from "react";
-import { useForm } from '@formspree/react'
+import React, { useState, useEffect, useRef } from "react";
 import { BsArrowRight } from "react-icons/bs";
 import { RiSendPlaneFill } from "react-icons/ri";
 
 const Contact = () => {
 
   // Initialize useForm and destructure the necessary methods
-  const [state, handleSubmit] = useForm("meqbvyqz");
   const [showModal, setShowModal] = useState(false);
   const [isFormSubmitted, setIsFormSubmitted] = useState(false);
   const formRef = useRef(null);
 
   // Check if the form submission is successful using the formState
   useEffect(() => {
-    if (state.succeeded && !isFormSubmitted) {
+    if (isFormSubmitted && !isFormSubmitted) {
       setShowModal(true);
       setIsFormSubmitted(true);
     }
-  }, [state.succeeded]);
+  }, [isFormSubmitted]);
 
   // Close modal and reset form state
   const closeModal = () => {
     setShowModal(false);
-    if(formRef.current) {
+    if (formRef.current) {
       formRef.current.reset();
     }
     setIsFormSubmitted(false);
   };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    const formData = new FormData(e.target);
+    const data = Object.fromEntries(formData);
+
+    const response = await fetch('https://xsf42njvnk.execute-api.us-east-1.amazonaws.com/dev/sendEmail', {
+      method: 'POST',
+      body: JSON.stringify(data),
+      headers: { 'Content-Type': 'application/json' },
+    });
+
+    if (!response.ok) {
+      const errorData = await response.json();
+      console.error('Error sending email:', errorData.error);
+      alert('An error occurred while sending your message. Please try again.');
+    }
+
+  };
+
 
   return (
     <div id="contact" className="container m-auto mt-16">
@@ -43,8 +62,8 @@ const Contact = () => {
 
       {/* heading */}
       <div
-      // data-aos="fade-up"
-      className="relative mb-5">
+        // data-aos="fade-up"
+        className="relative mb-5">
         <h3 className=" text-3xl font-black text-gray-400 sm:text-2xl dark:text-white">
           Contact
         </h3>
@@ -56,7 +75,7 @@ const Contact = () => {
         <div className="left w-[70%] flex-1 flex items-center justify-center sm:flex-col sm:w-full">
           <div className="flex-3 w-1/2 gap-3 flex items-end justify-end  flex-col sm:w-3/4">
             <div
-            data-aos="zoom-in"
+              data-aos="zoom-in"
             >
               <h1 className="text-4xl font-bold sm:text-3xl dark:text-white">Do You Want To</h1>
               <h3 className="text-xl sm:text-lg dark:text-white">
@@ -67,14 +86,14 @@ const Contact = () => {
           <div className=" flex p-5 items-center justify-center ">
             <button
               data-aos="zoom-in"
-              className= " text-yellow-500 font-extrabold text-3xl p-2 rounded-lg shadow-[0_0_10px_1px_rgba(0,0,0,0.1)] dark:shadow-[0_0_10px_1px_rgba(0,0,0,0.1)]">
+              className=" text-yellow-500 font-extrabold text-3xl p-2 rounded-lg shadow-[0_0_10px_1px_rgba(0,0,0,0.1)] dark:shadow-[0_0_10px_1px_rgba(0,0,0,0.1)]">
               <BsArrowRight className=" md:rotate-90 dark:text-white" />
             </button>
           </div>
         </div>
         <div className="right flex-1">
           <form
-          // data-aos="fade-up"
+            // data-aos="fade-up"
             ref={formRef}
             onSubmit={handleSubmit}
             data-aos="zoom-in"
@@ -107,10 +126,10 @@ const Contact = () => {
             <button
               className="bg-yellow-500 w-full text-white font-semibold  p-2 rounded-lg flex items-center justify-center space-x-1 dark:bg-gray-700"
               type="submit"
-              disabled={state.submitting}
+              disabled={isFormSubmitted}
             >
               <span>Send</span>
-              <RiSendPlaneFill/>
+              <RiSendPlaneFill />
             </button>
           </form>
         </div>
