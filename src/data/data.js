@@ -1,6 +1,6 @@
 import androidAppImage from '/src/assets/Android Application.jpg';
 import angularMapImage from '/src/assets/angular-map-project.jpg';
-import interactiveDesignImage from '/src/assets/Interactive design.jpg';
+import goGirlPaintingVideo from '/src/assets/go-girlpainting-video.mp4';
 import springWebAppImage from '/src/assets/spring-web-application.jpg';
 import stockSyncImage from '/src/assets/image.png';
 
@@ -9,11 +9,11 @@ import stockSyncImage from '/src/assets/image.png';
 export const data = [
   {
     id: 1,
-    img: androidAppImage,
-    title: "Android Vacation Tracker",
+    img: stockSyncImage,
+    title: "StockSync FullStack Inventory Manager",
     desc: "",
     link: "",
-    git: "https://github.com/Reece-Nunez/Android_Vacation_Tracker",
+    git: "https://github.com/Reece-Nunez/StockSync",
   },
   {
     id: 2,
@@ -24,11 +24,11 @@ export const data = [
   },
   {
     id: 3,
-    img: interactiveDesignImage,
-    title: "Interactive UX Website",
+    img: androidAppImage,
+    title: "Android Vacation Tracker",
     desc: "",
     link: "",
-    git: "https://github.com/Reece-Nunez/Interactive_UX_Website",
+    git: "https://github.com/Reece-Nunez/Android_Vacation_Tracker",
   },
   {
     id: 4,
@@ -40,11 +40,12 @@ export const data = [
   },
   {
     id: 5,
-    img: stockSyncImage,
-    title: "StockSync FullStack Inventory Manager",
-    desc: "",
-    link: "",
-    git: "https://github.com/Reece-Nunez/StockSync",
+    video: goGirlPaintingVideo,
+    title: "Go-Girl Painting LLC Website",
+    desc: "A vibrant, user-friendly website designed for Go Girl Painting, showcasing services, project galleries, and client testimonials.",
+    link: "https://go-girlpainting.com",
+    git: "https://github.com/Reece-Nunez/Interactive_UX_Website",
+    
   }
   
 ];

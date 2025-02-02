@@ -17,30 +17,49 @@ const WorkCard = () => {
             key={data.id}
             className="flex flex-col justify-center items-center gap-4"
           >
-            <POPUP className="img-content relative">
-              <div className="h-[280px] hover:scale-125 transition duration-500 cursor-pointer shadow-xl rounded-md overflow-hidden sm:h-[260px] sm:w-[92%] sm:bg-cover mx-auto ">
-                <img
-                  src={data.img}
-                  alt={data.title}
-                  className=" object-fit w-full h-full hover:scale-125 transition duration-500 cursor-pointer"
-                />
+            <POPUP className="media-content relative">
+              <div className="h-[280px] hover:scale-125 transition duration-500 cursor-pointer shadow-xl rounded-md overflow-hidden sm:h-[260px] sm:w-[92%] sm:bg-cover mx-auto">
+                {data.video ? (
+                  <video
+                    src={data.video}
+                    alt={data.title}
+                    className="object-fit w-full h-full hover:scale-125 transition duration-500 cursor-pointer"
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                  />
+                ) : (
+                  <img
+                    src={data.img}
+                    alt={data.title}
+                    className="object-fit w-full h-full hover:scale-125 transition duration-500 cursor-pointer"
+                  />
+                )}
               </div>
 
               <div
-                className={` popup w-full  h-[280px] shadow-xl rounded-md overflow-hidden sm:h-[260px] sm:w-[92%] p-4`}
+                className={`popup w-full h-[280px] shadow-xl rounded-md overflow-hidden sm:h-[260px] sm:w-[92%] p-4`}
               >
-                <p className=" text-gray-900 text-base leading-[1.4] text-justify w-[90%]">
+                <p className="text-gray-900 text-base leading-[1.4] text-justify w-[90%]">
                   {data.desc}
                 </p>
-                <div className=" flex items-center justify-center gap-4">
-                  <br className="w-[2px] bg-white" />
+                <div className="flex items-center justify-center gap-4">
+                <Link
+                    to={data.link}
+                    target="_blank"
+                    className="mt-3 rounded-md shadow-md p-1 px-2 flex gap-2 items-center justify-center font-medium"
+                  >
+                    <AiOutlineGithub className="text-black bg-white rounded-full border w-[35px] h-[35px] p-2" />
+                    <p className="text-black">Link</p>
+                  </Link>
                   <Link
                     to={data.git}
                     target="_blank"
-                    className="  mt-3 rounded-md shadow-md p-1 px-2 flex gap-2 items-center justify-center font-medium"
+                    className="mt-3 rounded-md shadow-md p-1 px-2 flex gap-2 items-center justify-center font-medium"
                   >
-                    <AiOutlineGithub className="  text-black bg-white rounded-full border  w-[35px] h-[35px] p-2" />
-                    <p className=" text-black">Code</p>
+                    <AiOutlineGithub className="text-black bg-white rounded-full border w-[35px] h-[35px] p-2" />
+                    <p className="text-black">Code</p>
                   </Link>
                 </div>
               </div>
