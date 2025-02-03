@@ -12,10 +12,6 @@ import pythonImage from '../../assets/python.png';
 import postgreImage from '../../assets/postgresql.png';
 import mysqlImage from '../../assets/mysql.png';
 import javascriptImage from '../../assets/javascript.png';
-import javaImage from '../../assets/java.png';
-import hmtlImage from '../../assets/html.png';
-import cssImage from '../../assets/css.png';
-
 
 import {
   SiJavascript,
@@ -62,25 +58,31 @@ const Skills = ({ darkMode }) => {
                 <ProgressBar
                 logo={<IoLogoCss3 />}
                 name={"CSS"}
-                value={88}
+                value={90}
                 darkMode={darkMode}
                 />
                 <ProgressBar
                   logo={<SiJavascript />}
                   name={"Javascript"}
-                  value={60}
+                  value={90}
                   darkMode={darkMode}
                 />
                 <ProgressBar
                 logo={<FaReact />}
                 name={"React Js"}
-                value={65}
+                value={90}
                 darkMode={darkMode}
                 />
                 <ProgressBar
                   logo={<SiTailwindcss />}
                   name={"Tailwind CSS"}
-                  value={70}
+                  value={90}
+                  darkMode={darkMode}
+                />
+                <ProgressBar
+                  logo={<SiExpress />}
+                  name={"Express JS"}
+                  value={90}
                   darkMode={darkMode}
                 />
               </div>
@@ -141,9 +143,9 @@ const Skills = ({ darkMode }) => {
             src={pythonImage}
           />
           <img
-            title="Agile Development"
+            title="JavaScript"
             className={`w-[40px] h-[40px] md:w-[35px] md:h-[35px] ${darkMode ? 'dark-mode-icon' : ''}`}
-            src={agileImage}
+            src={javascriptImage}
           />
           <img
             title="TypeScript"
@@ -175,8 +177,6 @@ const Skills = ({ darkMode }) => {
             className={`w-[40px] h-[40px] md:w-[35px] md:h-[35px] ${darkMode ? 'dark-mode-icon' : ''}`}
             src={mysqlImage}
           />
-          <img className={`w-[40px] h-[40px] md:w-[35px] md:h-[35px] ${darkMode ? 'dark-mode-icon' : ''}`} src="https://img.icons8.com/color/48/null/javascript--v1.png"/>
-          <img className={`w-[40px] h-[40px] md:w-[35px] md:h-[35px] ${darkMode ? 'dark-mode-icon' : ''}`} src="https://img.icons8.com/color/48/null/nodejs.png"/>
         </div> }
       </div>
     </div>

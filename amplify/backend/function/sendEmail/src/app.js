@@ -17,7 +17,7 @@ app.use(awsServerlessExpressMiddleware.eventContext());
 app.use((req, res, next) => {
   const allowedOrigins = [
     'https://nunezdev.com',
-    'https://jubilant-space-train-qrq9qqw56vqc96qr-5173.app.github.dev'  // Your current development origin
+    'http://localhost:5173'
   ];
   
   const origin = req.headers.origin;
@@ -51,7 +51,7 @@ app.post('/sendEmail', async (req, res) => {
     }
 
     const params = {
-      Source: 'reece@nunezdev.com',  // Verified sender's email
+      Source: `${name} <reece@nunezdev.com>`,  // Verified sender's email
       Destination: { ToAddresses: ['reece@nunezdev.com'] },  // Recipient email
       ReplyToAddresses: [email],
       Message: {
