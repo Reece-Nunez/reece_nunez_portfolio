@@ -2,8 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import { BsArrowRight } from "react-icons/bs";
 import { RiSendPlaneFill } from "react-icons/ri";
 import AOS from "aos";
-import 'aos/dist/aos.css';
-
+import "aos/dist/aos.css";
 
 const Contact = () => {
   // Initialize useForm and destructure the necessary methods
@@ -11,6 +10,14 @@ const Contact = () => {
   const [isFormSubmitted, setIsFormSubmitted] = useState(false);
   const formRef = useRef(null);
   const [isLoading, setIsLoading] = useState(false);
+
+  const [formData, setFormData] = useState({
+    email: "",
+    name: "",
+    budget: "",
+    message: "",
+  });
+  
 
   // Check if the form submission is successful using the formState
   useEffect(() => {
@@ -84,6 +91,23 @@ const Contact = () => {
       console.error("Network or other error:", error);
       alert("An unexpected error occurred. Please try again.");
     }
+  };
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+
+    if (name === "budget") {
+      const formattedValue = formatCurrency(value);
+      setFormData((prevData) => ({ ...prevData, [name]: formattedValue }));
+    } else {
+      setFormData((prevData) => ({ ...prevData, [name]: value }));
+    }
+  };
+
+  const formatCurrency = (value) => {
+    value = value.replace(/[^0-9]/g, ""); // Remove non-numeric characters
+    if (!value) return "";
+    return `$${Number(value).toLocaleString()}`; // Format with dollar sign and commas
   };
 
   return (
@@ -174,6 +198,16 @@ const Contact = () => {
               type="text"
               placeholder="e.g. John Doe"
               name="name"
+              required
+            />
+            <label>Budget:</label>
+            <input
+              className="px-3 shadow-[0_0_16px_0px_rgba(0,0,0,0.4)] p-2 rounded-lg w-full dark:bg-gray-700 dark:text-white"
+              type="text"
+              placeholder="e.g. $400.00"
+              name="budget"
+              onChange={handleChange}
+              value={formData.budget}
               required
             />
             <label>Message:</label>
