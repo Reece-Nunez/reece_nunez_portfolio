@@ -41,7 +41,23 @@ html {
   background: #000;
 }
 
+p, ul {
+  line-height: 1.6;
+}
+section + section {
+  border-top: 1px solid #e5e7eb;
+  padding-top: 2rem;
+  margin-top: 2rem;
+}
 
+a:hover {
+  color: #f6c400;
+  transform: scale(1.05);
+}
+
+button:hover {
+  transform: scale(1.05);
+}
 
 
 /* Hero circular spin */

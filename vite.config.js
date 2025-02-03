@@ -6,5 +6,8 @@ export default defineConfig({
   plugins: [react()],
   build: {
     assetsInclude: ['**/*.mp4']
+  },
+  resolve: {
+    extensions: ['.js', '.jsx', '.ts', '.tsx']
   }
 });
