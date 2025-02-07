@@ -3,6 +3,7 @@ import angularMapImage from '/src/assets/angular-map-project.jpg';
 import goGirlPaintingVideo from '/src/assets/go-girlpainting-video.mp4';
 import springWebAppImage from '/src/assets/spring-web-application.jpg';
 import stockSyncImage from '/src/assets/image.png';
+import constructionFormVideo from '/src/assets/construction-form.mp4';
 
 
 
@@ -46,6 +47,14 @@ export const data = [
     link: "https://go-girlpainting.com",
     git: "https://github.com/Reece-Nunez/Interactive_UX_Website",
     
+  },
+  {
+    id: 6,
+    video: constructionFormVideo,
+    title: "Construction Project Management API & Form Handler",
+    desc: "Designed a serverless construction project management form and API using AWS Lambda, API Gateway, and Amplify. The API securely handles project data submissions, including project details, budgets, and timelines, with input validation and CORS management. Integrated a React-based front-end form with Axios to ensure seamless communication with the backend. This project highlights expertise in full-stack development, serverless architecture, and API integration.",
+    link: "https://master.d2oohta4kgmxke.amplifyapp.com/",
+    git: "https://github.com/Reece-Nunez/construction-form",
   }
   
 ];
