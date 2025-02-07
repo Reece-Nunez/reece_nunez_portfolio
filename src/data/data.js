@@ -1,5 +1,5 @@
 import androidAppImage from '/src/assets/Android Application.jpg';
-import angularMapImage from '/src/assets/angular-map-project.jpg';
+import weatherDashboardVideo from '/src/assets/weather-dashboard.mp4'
 import goGirlPaintingVideo from '/src/assets/go-girlpainting-video.mp4';
 import springWebAppImage from '/src/assets/spring-web-application.jpg';
 import stockSyncImage from '/src/assets/image.png';
@@ -17,13 +17,6 @@ export const data = [
     git: "https://github.com/Reece-Nunez/StockSync",
   },
   {
-    id: 2,
-    img: angularMapImage,
-    title: "Angular Interactive Map",
-    link: "",
-    git: "https://github.com/Reece-Nunez/Angular_Interactive_Map",
-  },
-  {
     id: 3,
     img: androidAppImage,
     title: "Android Vacation Tracker",
@@ -38,6 +31,14 @@ export const data = [
     desc: "",
     link: "",
     git: "https://github.com/Reece-Nunez/Spring_Boot_Web_Application",
+  },
+  {
+    id: 2,
+    video: weatherDashboardVideo,
+    title: "Weather Dashboard Application",
+    desc: "A sleek, interactive weather app that displays current and forecasted weather for any location. Features include real-time city search with autocomplete, current location weather detection, dark mode, and error handling with animated modals. Built with React, Axios, and the OpenWeather API, this mobile-friendly app delivers a polished and responsive user experience.",
+    link: "",
+    git: "https://github.com/Reece-Nunez/weather_dashboard",
   },
   {
     id: 5,
