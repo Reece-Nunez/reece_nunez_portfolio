@@ -50,7 +50,7 @@ const WorkCard = () => {
                     target="_blank"
                     className="mt-3 rounded-md shadow-md p-1 px-2 flex gap-2 items-center justify-center font-medium"
                   >
-                    <AiOutlineGithub className="text-black bg-white rounded-full border w-[35px] h-[35px] p-2" />
+                    <RxExternalLink className="text-black bg-white rounded-full border w-[35px] h-[35px] p-2" />
                     <p className="text-black">Link</p>
                   </Link>
                   <Link
