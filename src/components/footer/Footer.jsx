@@ -40,7 +40,7 @@ const Footer = () => {
           </a>
         </div>
         <div className="sm:text-[12px] dark:text-white">
-          | Copyright &copy; <span>2024 Reece Nunez </span> All rights reserved
+          | Copyright &copy; <span>2025 Reece Nunez </span> All rights reserved
           <a href="#"></a> |
         </div>
       </div>

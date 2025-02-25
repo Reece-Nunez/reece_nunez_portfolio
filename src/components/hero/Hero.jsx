@@ -8,7 +8,7 @@ import { FaFacebook, FaLinkedinIn } from "react-icons/fa";
 import { FiDownload } from "react-icons/fi";
 import { FaPlay } from "react-icons/fa";
 import { TypeAnimation } from "react-type-animation";
-import resumePDF from "../../assets/reece_resume_2025.pdf";
+import resumePDF from "../../assets/2025_Resume.pdf";
 import headshotImage from "../../assets/head_shot.png";
 import darkModeImage from "../../assets/circle.png"
 import lightModeImage from "../../assets/Full Stack Developer2.png";
