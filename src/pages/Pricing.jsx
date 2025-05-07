@@ -23,7 +23,7 @@ function Pricing() {
       <div className="container mx-auto mt-24 p-5">
         {/* Sticky Section Navigation */}
         <nav className="sticky top-20 bg-white dark:bg-gray-900 shadow-md z-10 py-4 mb-8">
-          <ul className="flex space-x-6 justify-center text-lg font-medium">
+          <ul className="flex space-x-6 justify-center text-lg font-medium sm:text-xs mx-2">
             <li>
               <a
                 href="#project-pricing"

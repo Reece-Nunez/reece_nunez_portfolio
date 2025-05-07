@@ -28,16 +28,6 @@ const Home = () => {
     }
   }, [darkMode]);
 
-  // Handle smooth scrolling based on state
-  useEffect(() => {
-    if (location.state?.scrollTo) {
-      const targetElement = document.querySelector(location.state.scrollTo);
-      if (targetElement) {
-        targetElement.scrollIntoView({ behavior: "smooth" });
-      }
-    }
-  }, [location]);
-
   function toggleDarkMode() {
     setDarkMode(!darkMode);
   }

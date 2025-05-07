@@ -23,7 +23,7 @@ const Certs = ({ darkMode }) => {
                     </div>
                 </div>
                 {/* content */}
-                <div data-aos="zoom-in" className="flex flex-row items-center sm:items-center sm:flex-col justify-center gap-10">
+                <div data-aos="zoom-in" className="flex flex-row items-center sm:items-center sm:flex-row justify-center gap-4">
                     <div className="w-full md:w-1/3">
                         <CertBox image={itilImage} certName="ITIL 4 Foundation" />
                     </div>

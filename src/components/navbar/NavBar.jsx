@@ -48,14 +48,22 @@ const NavBar = ({ heroRef }) => {
       navigate(item.link);
     } else {
       if (location.pathname !== "/") {
-        // If not on the home page, navigate to home and pass sectionId in state
+        // If not on the homepage, navigate and pass sectionId in state
         navigate("/", { state: { sectionId: item.sectionId } });
       } else {
-        // If already on home, scroll to the section
-        scrollToSection(item.sectionId);
+        if (item.sectionId === "home") {
+          // Scroll to top via ref
+          if (heroRef?.current) {
+            heroRef.current.scrollIntoView({ behavior: "smooth" });
+          }
+        } else {
+          // Scroll to other sections by ID
+          scrollToSection(item.sectionId);
+        }
       }
     }
-    setIsOpen(false);
+
+    setIsOpen(false); // close mobile menu
   };
 
   const scrollToSection = (sectionId) => {
@@ -66,9 +74,14 @@ const NavBar = ({ heroRef }) => {
   };
 
   useEffect(() => {
-    // If the page loads with a sectionId state, scroll to that section
-    if (location.state?.sectionId) {
-      scrollToSection(location.state.sectionId);
+    if (location.state?.scrollToTop && heroRef?.current) {
+      setTimeout(() => {
+        heroRef.current.scrollIntoView({ behavior: "smooth" });
+      }, 50);
+    } else if (location.state?.sectionId) {
+      setTimeout(() => {
+        scrollToSection(location.state.sectionId);
+      }, 50);
     }
   }, [location]);
 
@@ -94,13 +107,9 @@ const NavBar = ({ heroRef }) => {
           <Link
             to="/"
             onClick={() => window.scrollTo(0, 0)}
-            className="title-name flex items-center text-3xl font-bold sm:text-3xl dark:text-white"
+            className="flex items-center gap-x-2 text-xl font-bold dark:text-white whitespace-nowrap"
           >
-            <img
-              src={reeceLogo}
-              className="reece-logo w-12 h-12 mr-5"
-              alt="reece-logo"
-            />
+            <img src={reeceLogo} className="w-10 h-10" alt="reece-logo" />
             <span>Reece Nunez</span>
           </Link>
         </div>
@@ -110,26 +119,29 @@ const NavBar = ({ heroRef }) => {
           data-aos="fade-down"
           className="nav-items flex items-center space-x-11"
         >
-          {/* Hamburger Menu Button */}
+          {/* hamburger (shows only on mobile) */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className={`cursor-pointer text-2xl hidden md:block ${
+            className={`text-2xl md:block ${
               darkMode ? "text-white" : "text-black"
             }`}
           >
-            <HiMenu size={25} />
+            {isOpen ? <RxCross2 size={28} /> : <HiMenu size={28} />}
           </button>
 
           <ul
-            className={`flex items-center space-x-11 ${
-              !isOpen ? "md:flex" : "md:right-[0%]"
-            } md:flex-col md:absolute m-auto md:top-0 md:right-[-100%] md:w-[78%] md:h-screen 
-  ${darkMode ? "md:bg-gray-900" : "md:bg-white"}`}
-          >
+  className={`fixed top-0 right-0 h-screen w-[78%] z-50
+              flex flex-col justify-center items-center
+              space-y-10 pt-20
+              transform transition-transform duration-300
+              md:block
+              ${isOpen ? "translate-x-0" : "translate-x-full"}
+              ${darkMode ? "bg-gray-900" : "bg-white"}`}
+>
             {/* Close Button for Mobile Menu */}
             <button
               onClick={() => setIsOpen(false)}
-              className={`text-3xl hidden md:block relative right-0 top-4 container mx-auto ${
+              className={`text-3xl block md:hidden absolute top-5 right-5 ${
                 darkMode ? "text-white" : "text-black"
               }`}
             >
@@ -138,22 +150,17 @@ const NavBar = ({ heroRef }) => {
 
             {/* Map through navItems */}
             {navItems.map((item) => (
-              <li
-                key={item.id}
-                className={`uppercase cursor-pointer font-bold hover:text-yellow-600 ${
-                  darkMode ? "text-white" : "text-black"
-                }`}
-              >
-                <button
-                  onClick={() => handleNavigation(item)}
-                  className={`uppercase cursor-pointer hover:text-yellow-600 font-bold ${
-                    darkMode ? "text-white" : "text-black"
-                  }`}
-                >
-                  {item.name}
-                </button>
-              </li>
-            ))}
+    <li key={item.id} className="w-full">
+      <button
+        onClick={() => handleNavigation(item)}
+        className={`w-full text-center uppercase font-bold tracking-wide
+                    hover:text-yellow-500
+                    ${darkMode ? "text-white" : "text-black"}`}
+      >
+        {item.name}
+      </button>
+    </li>
+  ))}
 
             {/* "Hire Me" Button */}
             <a
@@ -162,7 +169,6 @@ const NavBar = ({ heroRef }) => {
             >
               HIRE ME
             </a>
-
           </ul>
         </div>
       </nav>
