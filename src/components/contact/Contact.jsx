@@ -111,7 +111,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="container m-auto mt-16">
+    <div className="container p-0 m-auto mt-16">
       {/* Loading Overlay (spinner) */}
       {isLoading && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
@@ -152,9 +152,9 @@ const Contact = () => {
       </div>
 
       {/* card*/}
-      <div className="card-wrapper w-[90%] sm:w-[100%] mx-auto mt-5 flex items-center justify-center sm:flex-col">
-        <div className="left w-[70%] flex-1 flex items-center justify-center sm:flex-col sm:w-full">
-          <div className="flex-3 w-1/2 gap-3 flex items-end justify-end  flex-col sm:w-3/4">
+      <div className="card-wrapper w-[90%] flex-col sm:w-[90%] mx-auto mt-5 flex flex-row items-center justify-center">
+        <div className="left w-[100%] mb-3 flex items-center justify-center sm:flex-col sm:w-1/2">
+          <div className="w-full gap-3 flex items-end justify-end  flex-col sm:w-3/4">
             <div data-aos="zoom-in">
               <h1 className="text-4xl font-bold sm:text-3xl dark:text-white">
                 Do You Want To
@@ -164,7 +164,8 @@ const Contact = () => {
               </h3>
             </div>
           </div>
-          <div className=" flex p-5 items-center justify-center ">
+        </div>
+        <div className=" flex p-0 items-center justify-center ">
             <button
               data-aos="zoom-in"
               onClick={focusEmail}
@@ -173,14 +174,13 @@ const Contact = () => {
               <BsArrowRight className=" md:rotate-90 dark:text-white hover:scale-125" />
             </button>
           </div>
-        </div>
 
         <div className="right flex-1">
           <form
             ref={formRef}
             onSubmit={handleSubmit}
             data-aos="zoom-in"
-            className="flex flex-col gap-5 w-[70%] md:w-[100%] sm:w-[95%] mx-auto"
+            className="flex flex-col gap-5 w-[100%] md:w-[100%] sm:w-[95%] mx-auto"
           >
             {/* form fields */}
             <label>Email:</label>

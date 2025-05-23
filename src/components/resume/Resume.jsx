@@ -2,7 +2,7 @@ import React from "react";
 
 const Resume = () => {
   return (
-    <div id="resume" className=" container m-auto   mt-16">
+    <div id="resume" className=" container m-auto mt-16 sm:w-full p-0 flex flex-col items-center">
       {/* heading */}
       <div data-aos="fade-up" className="relative mb-5">
         <h3 className=" text-3xl font-black text-gray-400 sm:text-2xl dark:text-white">
@@ -16,11 +16,11 @@ const Resume = () => {
         </p>
       </div>
       {/* card*/}
-      <div className="card-wrapper w-[90%] sm:w-full mt-5 flex md:flex-col sm:gap-5 mx-auto ">
+      <div className="card-wrapper w-[90%] sm:w-full flex-col mt-5 flex md:flex-row sm:gap-5 mx-auto ">
         <div className="left flex-1 flex items-center justify-center">
           <fieldset
             data-aos="zoom-in"
-            className=" w-[80%] p-5 py-12 sm:py-8 sm:w-full sm:p-2"
+            className=" w-[80%] p-0 py-12 sm:py-8 sm:w-full sm:p-2"
           >
             <legend className=" w-auto ml-[50%] translate-x-[-50%] border-2 border-gray-200 rounded-3xl py-1 px-8 font-semibold text-xl text-yellow-500 dark:text-white">
               Experience
@@ -61,7 +61,7 @@ const Resume = () => {
         <div className="left flex-1 flex items-center justify-center">
           <fieldset
             data-aos="zoom-in"
-            className=" w-[80%] p-5 py-12 sm:py-8 sm:w-full sm:p-2"
+            className=" w-[80%] p-0 py-12 sm:py-8 sm:w-full sm:p-2"
           >
             <legend className=" w-auto ml-[50%] translate-x-[-50%] border-2 border-gray-200 rounded-3xl py-1 px-8 font-semibold text-xl text-yellow-500 dark:text-white">
               Experience
@@ -100,7 +100,7 @@ const Resume = () => {
         <div className="right flex-1 flex items-center justify-center">
           <fieldset
             data-aos="zoom-in"
-            className=" w-[80%] p-5 py-12 sm:py-8 sm:w-full sm:p-2"
+            className=" w-[80%] p-0 py-12 sm:py-8 sm:w-full sm:p-2"
           >
             <legend className=" w-auto ml-[50%] translate-x-[-50%] border-2 border-gray-200 rounded-3xl py-1 px-8 font-semibold text-xl text-yellow-500 dark:text-white">
               Education

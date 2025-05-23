@@ -1,9 +1,7 @@
-import React from "react";
 import ProgressBar from "../../chip/ProgressBar";
 import SkillBox from "../../chip/SkillBox";
 
 import { IoLogoHtml5, IoLogoCss3 } from "react-icons/io";
-import agileImage from '../../assets/agile.png';
 import androidImage from '../../assets/android.png';
 import typescriptImage from '../../assets/typescript.png';
 import springbootImage from '../../assets/springboot.png';
@@ -26,7 +24,7 @@ import { IoLogoNodejs } from "react-icons/io";
 const Skills = ({ darkMode }) => {
   return (
     <div id="skills">
-      <div className=" container m-auto  mt-16">
+      <div className=" container m-auto mt-16 p-0">
         {/* heading */}
         <div data-aos="fade-up" className="relative mb-5">
           <h3 className=" text-3xl font-black text-gray-400 sm:text-2xl dark:text-white">
@@ -35,7 +33,7 @@ const Skills = ({ darkMode }) => {
           <span className="h-[1.1px] right-0 absolute w-[90%] bg-gray-300 block"></span>
         </div>
         {/* content*/}
-        <div className="flex md:flex-col ">
+        <div className="flex flex-col justify-center md:flex-row ">
           <div className="left flex-1 w-full">
             <p
               data-aos="fade-up"
@@ -46,9 +44,9 @@ const Skills = ({ darkMode }) => {
             {/* left box */}
             <div
               data-aos="zoom-in"
-              className="progress flex items-center h-[100%] justify-end md:justify-center"
+              className="progress flex items-center h-[100%] justify-center md:justify-center"
             >
-              <div className=" flex flex-col gap-6  w-3/4  my-5 md:w-[90%]">
+              <div className=" flex flex-col gap-6  w-3/4  my-5 md:w-[100%]">
                 <ProgressBar
                 logo={<IoLogoHtml5 />}
                 name={"HTML"}
