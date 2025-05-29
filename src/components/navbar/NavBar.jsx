@@ -4,7 +4,8 @@ import { HiMenu } from "react-icons/hi";
 import { RxCross2 } from "react-icons/rx";
 import { FaMoon, FaSun } from "react-icons/fa";
 import { DarkModeContext } from "../../context/DarkModeContext.jsx";
-import reeceLogo from "../../assets/reece-nunez-high-resolution-logo-transparent.svg";
+import reeceLogo from "../../assets/nunezdev-logo-2.png";
+import mobileLogo from "../../assets/nunezdev-logo.png";
 
 const navItems = [
   { id: 0, name: "home", link: "/", sectionId: "home" },
@@ -73,8 +74,18 @@ const NavBar = ({ heroRef }) => {
             onClick={() => window.scrollTo(0, 0)}
             className="flex items-center gap-x-2 text-xl font-bold dark:text-white whitespace-nowrap"
           >
-            <img src={reeceLogo} className="w-10 h-10" alt="logo" />
-            <span>Reece Nunez</span>
+            <>
+              <img
+                src={mobileLogo}
+                alt="mobile logo"
+                className="block lg:hidden w-14 h-auto"
+              />
+              <img
+                src={reeceLogo}
+                alt="desktop logo"
+                className="hidden lg:block w-48 h-auto"
+              />
+            </>
           </Link>
         </div>
 
@@ -84,9 +95,8 @@ const NavBar = ({ heroRef }) => {
             <li key={item.id}>
               <button
                 onClick={() => handleNavigation(item)}
-                className={`uppercase font-bold hover:text-yellow-400 ${
-                  darkMode ? "text-white" : "text-black"
-                }`}
+                className={`uppercase font-bold hover:text-yellow-400 ${darkMode ? "text-white" : "text-black"
+                  }`}
               >
                 {item.name}
               </button>
@@ -103,9 +113,8 @@ const NavBar = ({ heroRef }) => {
         {/* Hamburger */}
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className={`block lg:hidden text-2xl z-50 ${
-            darkMode ? "text-white" : "text-black"
-          }`}
+          className={`block lg:hidden text-2xl z-50 ${darkMode ? "text-white" : "text-black"
+            }`}
         >
           {isOpen ? <RxCross2 size={28} /> : <HiMenu size={28} />}
         </button>
