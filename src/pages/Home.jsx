@@ -32,6 +32,17 @@ const Home = () => {
     setDarkMode(!darkMode);
   }
 
+  useEffect(() => {
+    const section = location.state?.scrollTo;
+    if (section) {
+      setTimeout(() => {
+        const el = document.querySelector(section);
+        if (el) el.scrollIntoView({ behavior: "smooth" });
+      }, 100);
+    }
+  }, [location]);
+
+
   return (
     <>
       <NavBar

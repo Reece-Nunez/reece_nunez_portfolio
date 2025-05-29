@@ -3,6 +3,8 @@ import NavBar from "../components/navbar/NavBar.jsx";
 import Footer from "../components/footer/Footer.jsx";
 import { DarkModeContext } from "../context/DarkModeContext.jsx";
 import { useNavigate } from "react-router-dom";
+import { motion } from "framer-motion";
+import { FaCogs, FaBolt, FaRocket, FaGem, FaWrench, FaShieldAlt, FaCrown, FaRegClock, FaGift } from "react-icons/fa";
 
 function Pricing() {
   const heroRef = useRef(null);
@@ -17,271 +19,146 @@ function Pricing() {
     navigate("/", { state: { scrollTo: "#contact" } });
   };
 
+  const fadeUp = {
+    hidden: { opacity: 0, y: 40 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+  };
+
+  const pricingTiers = [
+    {
+      title: "Starter Project",
+      icon: <FaBolt className="text-yellow-500 text-3xl" />,
+      price: "$500 – $2,000",
+      features: ["1-2 core pages", "Mobile-friendly design", "Basic interactive components"]
+    },
+    {
+      title: "Basic Project",
+      icon: <FaCogs className="text-yellow-500 text-3xl" />,
+      price: "$3,000 – $7,000",
+      features: ["Up to 10 pages", "Responsive design", "Initial SEO optimization"]
+    },
+    {
+      title: "Intermediate Project",
+      icon: <FaRocket className="text-yellow-500 text-3xl" />,
+      price: "$8,000 – $15,000",
+      features: ["Custom backend", "Role-based access", "Advanced frontend"]
+    },
+    {
+      title: "Advanced Project",
+      icon: <FaGem className="text-yellow-500 text-3xl" />,
+      price: "$20,000+",
+      features: ["Cloud-hosted app", "Analytics & optimization", "Scalable architecture"]
+    },
+  ];
+
+  const maintenanceTiers = [
+    {
+      title: "Lite Tier",
+      icon: <FaRegClock className="text-yellow-500 text-2xl" />,
+      price: "$75/month",
+      features: ["Basic hosting coverage", "Uptime and SSL monitoring", "No code updates included"]
+    },
+    {
+      title: "Tier 1: Essential",
+      icon: <FaShieldAlt className="text-yellow-500 text-2xl" />,
+      price: "$150–$200/month",
+      features: ["Infrastructure coverage", "Security updates", "2 hours/month updates"]
+    },
+    {
+      title: "Tier 2: Standard",
+      icon: <FaWrench className="text-yellow-500 text-2xl" />,
+      price: "$300–$500/month",
+      features: ["All Tier 1 features", "5 hours/month updates", "Priority support"]
+    },
+    {
+      title: "Tier 3: Premium",
+      icon: <FaCrown className="text-yellow-500 text-2xl" />,
+      price: "$600–$1,000/month",
+      features: ["All Tier 2 features", "10 hours/month updates", "Emergency support"]
+    },
+  ];
+
+  const discountBenefits = [
+    "Annual Prepayment: 5–10% discount",
+    "Loyalty Upgrade: Complimentary service upgrades after 6 months",
+    "Hour Rollover: Unused hours roll over for 2 months"
+  ];
+
+  const serviceTerms = [
+    "Clear service level agreements (SLAs)",
+    "Response times based on package tier",
+    "Client portal for requests and tracking"
+  ];
+
   return (
     <div className={darkMode ? "dark" : ""}>
       <NavBar heroRef={heroRef} />
-      <div className="container mx-auto mt-24 p-5">
-        {/* Sticky Section Navigation */}
-        <nav className="sticky top-20 bg-white dark:bg-gray-900 shadow-md z-10 py-4 mb-8">
-          <ul className="flex space-x-6 justify-center text-lg font-medium sm:text-xs mx-2">
-            <li>
-              <a
-                href="#project-pricing"
-                className="hover:text-yellow-500 dark:text-white"
-              >
-                Project-Based Pricing
-              </a>
-            </li>
-            <li>
-              <a
-                href="#maintenance-packages"
-                className="hover:text-yellow-500 dark:text-white"
-              >
-                Maintenance Packages
-              </a>
-            </li>
-            <li>
-              <a
-                href="#custom-plans"
-                className="hover:text-yellow-500 dark:text-white"
-              >
-                Custom Plans
-              </a>
-            </li>
-            <li>
-              <a
-                href="#discounts"
-                className="hover:text-yellow-500 dark:text-white"
-              >
-                Discounts
-              </a>
-            </li>
+      <div className="container mx-auto mt-24 px-4 sm:px-6 lg:px-8">
+        <motion.h1 className="text-4xl font-bold text-center mb-12 dark:text-white" initial="hidden" whileInView="visible" variants={fadeUp}>
+          Project-Based Pricing
+        </motion.h1>
+
+        <motion.div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6" initial="hidden" whileInView="visible" variants={fadeUp}>
+          {pricingTiers.map((tier, index) => (
+            <motion.div key={index} className="bg-white dark:bg-gray-800 p-6 rounded-2xl shadow-md hover:shadow-lg transition-transform transform hover:scale-[1.02]" whileHover={{ scale: 1.03 }}>
+              <div className="flex flex-col items-center space-y-4">
+                {tier.icon}
+                <h2 className="text-xl font-semibold dark:text-white">{tier.title}</h2>
+                <p className="text-yellow-500 font-medium text-lg">{tier.price}</p>
+                <ul className="list-disc list-inside text-gray-600 dark:text-gray-300 text-sm space-y-1">
+                  {tier.features.map((feature, i) => <li key={i}>{feature}</li>)}
+                </ul>
+              </div>
+            </motion.div>
+          ))}
+        </motion.div>
+
+        <motion.h2 className="text-3xl font-bold mt-24 mb-10 text-center dark:text-white" initial="hidden" whileInView="visible" variants={fadeUp}>
+          Maintenance & Update Packages
+        </motion.h2>
+
+        <motion.div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6" initial="hidden" whileInView="visible" variants={fadeUp}>
+          {maintenanceTiers.map((tier, index) => (
+            <motion.div key={index} className="bg-white dark:bg-gray-800 p-6 rounded-2xl shadow-md hover:shadow-lg transition-transform transform hover:scale-[1.02]" whileHover={{ scale: 1.03 }}>
+              <div className="flex flex-col items-center space-y-4">
+                {tier.icon}
+                <h2 className="text-xl font-semibold dark:text-white text-center">{tier.title}</h2>
+                <p className="text-yellow-500 font-medium text-lg">{tier.price}</p>
+                <ul className="list-disc list-inside text-gray-600 dark:text-gray-300 text-sm space-y-1">
+                  {tier.features.map((feature, i) => <li key={i}>{feature}</li>)}
+                </ul>
+              </div>
+            </motion.div>
+          ))}
+        </motion.div>
+
+        <motion.div className="mt-20" initial="hidden" whileInView="visible" variants={fadeUp}>
+          <h2 className="text-2xl font-bold mb-4 dark:text-white">Discounts & Retention Benefits</h2>
+          <ul className="list-disc pl-5 text-yellow-600 text-lg font-medium">
+            {discountBenefits.map((item, i) => <li key={i}>{item}</li>)}
           </ul>
-        </nav>
+        </motion.div>
 
-        {/* Project-Based Pricing Section */}
-        <section className="mb-12">
-          <h1
-            id="project-pricing"
-            className="text-4xl font-bold mb-8 dark:text-white"
-          >
-            Project-Based Pricing
-          </h1>
+        <motion.div className="mt-12" initial="hidden" whileInView="visible" variants={fadeUp}>
+          <h2 className="text-2xl font-bold mb-4 dark:text-white">Service Terms</h2>
+          <ul className="list-disc pl-5 text-yellow-600 text-lg font-medium">
+            {serviceTerms.map((item, i) => <li key={i}>{item}</li>)}
+          </ul>
+        </motion.div>
 
-          <div className="space-y-6">
-            <div className="bg-gray-100 dark:bg-gray-800 p-6 rounded-lg shadow-md">
-              <h2 className="text-2xl font-semibold mb-4 dark:text-white">
-                Starter Project
-              </h2>
-              <p className="text-lg font-medium text-yellow-600 mt-2">
-                <strong>Price Range:</strong> $500 – $2,000
-              </p>
-              <ul className="list-disc pl-5 mt-2 dark:text-gray-300">
-                <li>1-2 core pages or sections</li>
-                <li>Mobile-friendly, responsive design</li>
-                <li>Basic interactive components</li>
-              </ul>
-            </div>
-
-            <div className="bg-gray-100 dark:bg-gray-800 p-6 rounded-lg shadow-md">
-              <h2 className="text-2xl font-semibold mb-4 dark:text-white">
-                Basic Project
-              </h2>
-              <p className="text-lg font-medium text-yellow-600 mt-2">
-                <strong>Price Range:</strong> $3,000 – $7,000
-              </p>
-              <ul className="list-disc pl-5 mt-2 dark:text-gray-300">
-                <li>Up to 10 pages</li>
-                <li>Mobile-first, responsive design</li>
-                <li>Initial SEO setup and optimization</li>
-              </ul>
-            </div>
-
-            <div className="bg-gray-100 dark:bg-gray-800 p-6 rounded-lg shadow-md">
-              <h2 className="text-2xl font-semibold mb-4 dark:text-white">
-                Intermediate Project
-              </h2>
-              <p className="text-lg font-medium text-yellow-600 mt-2">
-                <strong>Price Range:</strong> $8,000 – $15,000
-              </p>
-              <ul className="list-disc pl-5 mt-2 dark:text-gray-300">
-                <li>Full-stack development with custom backend</li>
-                <li>Role-based access control</li>
-                <li>Advanced front-end with React or Angular</li>
-              </ul>
-            </div>
-
-            <div className="bg-gray-100 dark:bg-gray-800 p-6 rounded-lg shadow-md">
-              <h2 className="text-2xl font-semibold mb-4 dark:text-white">
-                Advanced Project
-              </h2>
-              <p className="text-lg font-medium text-yellow-600 mt-2">
-                <strong>Price Range:</strong> $20,000+
-              </p>
-              <ul className="list-disc pl-5 mt-2 dark:text-gray-300">
-                <li>Cloud-hosted full-stack application</li>
-                <li>Advanced analytics and performance optimization</li>
-                <li>Scalable and maintainable architecture</li>
-              </ul>
-            </div>
-          </div>
-        </section>
-
-        {/* Maintenance and Update Packages Section */}
-        <section>
-          <h1
-            id="maintenance-packages"
-            className="text-4xl font-bold mb-8 dark:text-white"
-          >
-            Maintenance & Update Packages
-          </h1>
-
-          <div className="space-y-6">
-            <div className="bg-gray-100 dark:bg-gray-800 p-6 rounded-lg shadow-md">
-              <h2 className="text-2xl font-semibold mb-4 dark:text-white">
-                Tier 1: Essential Maintenance
-              </h2>
-              <p className="text-lg font-medium text-yellow-600 mt-2">
-                <strong>Monthly Fee:</strong> $150 to $200
-              </p>
-              <ul className="list-disc pl-5 mt-2 dark:text-gray-300">
-                <li>Coverage of infrastructure costs</li>
-                <li>Security updates and performance monitoring</li>
-                <li>Up to 2 hours of updates per month</li>
-                <li>Email-based support</li>
-              </ul>
-            </div>
-
-            <div className="bg-gray-100 dark:bg-gray-800 p-6 rounded-lg shadow-md">
-              <h2 className="text-2xl font-semibold mb-4 dark:text-white">
-                Tier 2: Standard Support
-              </h2>
-              <p className="text-lg font-medium text-yellow-600 mt-2">
-                <strong>Monthly Fee:</strong> $300 to $500
-              </p>
-              <ul className="list-disc pl-5 mt-2 dark:text-gray-300">
-                <li>All services included in Tier 1</li>
-                <li>Up to 5 hours of updates per month</li>
-                <li>Priority support</li>
-                <li>Basic SEO or analytics reports</li>
-              </ul>
-            </div>
-
-            <div className="bg-gray-100 dark:bg-gray-800 p-6 rounded-lg shadow-md">
-              <h2 className="text-2xl font-semibold mb-4 dark:text-white">
-                Tier 3: Premium Support
-              </h2>
-              <p className="text-lg font-medium text-yellow-600 mt-2">
-                <strong>Monthly Fee:</strong> $600 to $1,000
-              </p>
-              <ul className="list-disc pl-5 mt-2 dark:text-gray-300">
-                <li>All services included in Tier 2</li>
-                <li>Up to 10 hours of updates per month</li>
-                <li>Emergency support</li>
-                <li>New feature development</li>
-              </ul>
-            </div>
-          </div>
-
-          {/* Additional Services */}
-          <div className="mt-16">
-            <h2 className="text-2xl font-semibold dark:text-white">
-              Additional Services
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
-              <div className="bg-gray-100 dark:bg-gray-800 p-6 rounded-lg shadow-md">
-                <h3 className="text-xl font-semibold dark:text-white">
-                  Extra Hours
-                </h3>
-                <p className="mt-2 dark:text-gray-300">
-                  $100/hour for additional updates
-                </p>
-              </div>
-              <div className="bg-gray-100 dark:bg-gray-800 p-6 rounded-lg shadow-md">
-                <h3 className="text-xl font-semibold dark:text-white">
-                  New Features
-                </h3>
-                <p className="mt-2 dark:text-gray-300">
-                  Custom quotes for major feature development
-                </p>
-              </div>
-              <div className="bg-gray-100 dark:bg-gray-800 p-6 rounded-lg shadow-md">
-                <h3 className="text-xl font-semibold dark:text-white">
-                  Full Redesigns
-                </h3>
-                <p className="mt-2 dark:text-gray-300">
-                  Project-based pricing for large updates
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* Custom Plans */}
-          <div className="mt-12">
-            <h2
-              id="custom-plans"
-              className="text-2xl font-semibold dark:text-white"
-            >
-              Custom Plans
-            </h2>
-            <p className="text-lg font-medium text-yellow-600 mt-2">
-              We offer tailored solutions based on your specific business needs.
-            </p>
-          </div>
-
-          {/* Discounts & Retention Benefits */}
-          <div className="mt-12">
-            <h2
-              id="discounts"
-              className="text-2xl font-semibold dark:text-white"
-            >
-              Discounts & Retention Benefits
-            </h2>
-            <ul className="list-disc pl-5 mt-4 text-lg font-medium text-yellow-600 mt-2">
-              <li>
-                <strong>Annual Prepayment:</strong> 5-10% discount for annual
-                payments
-              </li>
-              <li>
-                <strong>Loyalty Upgrade:</strong> Complimentary service upgrades
-                after six months
-              </li>
-              <li>
-                <strong>Hour Rollover:</strong> Unused hours can be rolled over
-                for up to two months
-              </li>
-            </ul>
-          </div>
-
-          {/* Service Terms */}
-          <div className="mt-12">
-            <h2 className="text-2xl font-semibold dark:text-white">
-              Service Terms
-            </h2>
-            <ul className="list-disc pl-5 mt-4 text-lg font-medium text-yellow-600 mt-2">
-              <li>Clear service level agreements (SLAs)</li>
-              <li>Response times based on package tier</li>
-              <li>Client portal for requests and tracking</li>
-            </ul>
-          </div>
-        </section>
-
-        <div className="mt-16 text-center">
-          <h2 className="text-3xl font-semibold dark:text-white">
-            Ready to Get Started?
-          </h2>
-          <p className="mt-4 text-lg dark:text-gray-300">
-            Contact us today to discuss your project or maintenance needs.
+        <motion.div className="mt-20 text-center" initial="hidden" whileInView="visible" variants={fadeUp}>
+          <h2 className="text-3xl font-bold dark:text-white">Let’s Build Something Amazing</h2>
+          <p className="text-lg mt-3 dark:text-gray-300">
+            Whether you're launching your MVP or redesigning your platform, let's make it happen.
           </p>
           <button
             onClick={handleContactNavigation}
-            className="mt-6 inline-block bg-yellow-500 text-white font-bold py-3 px-8 rounded-lg hover:bg-yellow-600"
+            className="mt-6 px-8 py-3 bg-yellow-500 hover:bg-yellow-600 text-white font-bold rounded-lg shadow-lg transition-transform hover:scale-105"
           >
             Contact Us
           </button>
-        </div>
+        </motion.div>
       </div>
-
       <Footer />
     </div>
   );
