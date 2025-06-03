@@ -31,7 +31,7 @@ const Home = () => {
   function toggleDarkMode() {
     setDarkMode(!darkMode);
   }
-
+ 
   useEffect(() => {
     const section = location.state?.scrollTo;
     if (section) {
