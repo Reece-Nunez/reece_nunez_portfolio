@@ -28,25 +28,25 @@ function Pricing() {
     {
       title: "Starter Project",
       icon: <FaBolt className="text-yellow-500 text-3xl" />,
-      price: "$500 – $2,000",
+      price: "$300 – $1,000",
       features: ["1-2 core pages", "Mobile-friendly design", "Basic interactive components"]
     },
     {
       title: "Basic Project",
       icon: <FaCogs className="text-yellow-500 text-3xl" />,
-      price: "$3,000 – $7,000",
+      price: "$1,000 – $5,000",
       features: ["Up to 10 pages", "Responsive design", "Initial SEO optimization"]
     },
     {
       title: "Intermediate Project",
       icon: <FaRocket className="text-yellow-500 text-3xl" />,
-      price: "$8,000 – $15,000",
+      price: "$5,000 – $10,000",
       features: ["Custom backend", "Role-based access", "Advanced frontend"]
     },
     {
       title: "Advanced Project",
       icon: <FaGem className="text-yellow-500 text-3xl" />,
-      price: "$20,000+",
+      price: "$15,000+",
       features: ["Cloud-hosted app", "Analytics & optimization", "Scalable architecture"]
     },
   ];
@@ -61,19 +61,19 @@ function Pricing() {
     {
       title: "Tier 1: Essential",
       icon: <FaShieldAlt className="text-yellow-500 text-2xl" />,
-      price: "$150–$200/month",
+      price: "$120–$150/month",
       features: ["Infrastructure coverage", "Security updates", "2 hours/month updates"]
     },
     {
       title: "Tier 2: Standard",
       icon: <FaWrench className="text-yellow-500 text-2xl" />,
-      price: "$300–$500/month",
+      price: "$150–$200/month",
       features: ["All Tier 1 features", "5 hours/month updates", "Priority support"]
     },
     {
       title: "Tier 3: Premium",
       icon: <FaCrown className="text-yellow-500 text-2xl" />,
-      price: "$600–$1,000/month",
+      price: "$200–$600/month",
       features: ["All Tier 2 features", "10 hours/month updates", "Emergency support"]
     },
   ];
