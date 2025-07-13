@@ -3,7 +3,6 @@ import { Suspense } from "react";
 import { BarLoader } from "react-spinners";
 import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
-import Pricing from "./pages/Pricing.jsx";
 
 const App = () => {
   const [loading, setLoading] = useState(true);
@@ -30,7 +29,6 @@ const App = () => {
       ) : (
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/pricing" element={<Pricing />} />
         </Routes>
       )}
     </Suspense>

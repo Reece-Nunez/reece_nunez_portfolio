@@ -12,7 +12,6 @@ const navItems = [
   { id: 1, name: "skills", link: "/", sectionId: "skills" },
   { id: 2, name: "projects", link: "/", sectionId: "projects" },
   { id: 3, name: "resume", link: "/", sectionId: "resume" },
-  { id: 4, name: "pricing", link: "/pricing", isRoute: true },
   { id: 5, name: "contact", link: "/", sectionId: "contact" },
 ];
 
@@ -68,27 +67,6 @@ const NavBar = ({ heroRef }) => {
       <nav className="w-full max-w-screen-xl mx-auto flex items-center justify-between px-4">
         {/* Left: Dark mode + logo */}
         <DarkModeToggle />
-        <div className="flex items-center gap-10">
-          <Link
-            to="/"
-            onClick={() => window.scrollTo(0, 0)}
-            className="flex items-center gap-x-2 text-xl font-bold dark:text-white whitespace-nowrap"
-          >
-            <>
-              <img
-                src={mobileLogo}
-                alt="mobile logo"
-                className="block lg:hidden w-14 h-auto"
-              />
-              <img
-                src={reeceLogo}
-                alt="desktop logo"
-                className="hidden lg:block w-48 h-auto"
-              />
-            </>
-          </Link>
-        </div>
-
         {/* Desktop Nav */}
         <ul className="hidden lg:flex space-x-10 items-center">
           {navItems.map((item) => (
