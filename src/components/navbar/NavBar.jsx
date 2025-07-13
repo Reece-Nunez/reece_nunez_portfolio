@@ -4,8 +4,7 @@ import { HiMenu } from "react-icons/hi";
 import { RxCross2 } from "react-icons/rx";
 import { FaMoon, FaSun } from "react-icons/fa";
 import { DarkModeContext } from "../../context/DarkModeContext.jsx";
-import reeceLogo from "../../assets/nunezdev-logo-2.png";
-import mobileLogo from "../../assets/nunezdev-logo.png";
+
 
 const navItems = [
   { id: 0, name: "home", link: "/", sectionId: "home" },
